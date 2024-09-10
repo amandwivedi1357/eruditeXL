@@ -36,12 +36,12 @@ const About = () => {
 
                 </div>
                 <div className="flex-1 sm:mt-7">
-                    <img src="/about/top.png" alt="" className='w-full'/>
+                    <img loading="lazy" src="/about/top.png" alt="" className='w-full'/>
                 </div>
                </div>
                <div className='my-[40px]  flex sm:block '>
                 <div className="flex-1 ">
-                    <img src="/about/vision.png" alt="" className='w-full'/>
+                    <img loading="lazy" src="/about/vision.png" alt="" className='w-full'/>
                 </div>
                 <div className="flex justify-center flex-col gap-[20px] flex-1 sm:m-[20px]">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px] sm:mt-5'>
@@ -141,7 +141,7 @@ const About = () => {
                        
                 </div>
 
-            <img src="/Home/erudite.png" alt="" className="w-full absolute bottom-0"/>
+            <img loading="lazy" src="/Home/erudite.png" alt="" className="w-full absolute bottom-0"/>
             </div>
             <div className='hidden sm:block sm:w-full m-[20px]'>
             <p className='text-[25px] font-bold '>Why Choose us</p>
@@ -217,7 +217,7 @@ const About = () => {
 
             
             </div>
-                <img src="/about/mob_mount.png" alt="" className='w-full mt-20 hidden sm:block'/>
+                <img loading="lazy" src="/about/mob_mount.png" alt="" className='w-full mt-20 hidden sm:block'/>
 
             <div className="m-[40px] sm:hidden">
             <p className="text-center text-[30px] font-inter font-bold">
@@ -227,7 +227,7 @@ const About = () => {
                 {
                     members.map((item,idx)=>(
                         <div className='flex flex-col gap-[15px] mx-auto' key={idx}>
-                            <img src={item.img} alt="" />
+                            <img loading="lazy" src={item.img} alt="" />
                             <p className="font-bold font-inter">{item.name}</p>
                             <p className="font-inter">{item.post}</p>
                         </div>

@@ -1,13 +1,15 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { LuTwitter } from 'react-icons/lu'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const navigate = useNavigate()
   return (
     <div className='w-full bg-[#001E32] mt-[20px] sm:w-full '>
         <div className='flex gap-2 py-[40px] px-[30px] flex-row sm:flex-col'>
             <div className='w-[20%] flex flex-col gap-5  sm:w-full'>
-                <img src="/Home/logo.svg" alt="" className='w-[60%] '/>
+                <img loading="lazy" src="/Home/logo.svg" alt="" className='w-[60%] '/>
                 <p className='font-inter text-[16px] text-white '>
                 Join EruditeXL in exploring and discovering your inner strength.
                 </p>
@@ -15,29 +17,29 @@ const Footer = () => {
             <div className='w-[20%] ml-[50px] flex flex-col gap-3 sm:w-full sm:ml-0  sm:mt-8'>
                 <p className='font-semibold font-inter text-white'>Quick Links</p>
                 <ul>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Home</li>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>About us</li>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Camps</li>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>National Trips</li>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Gallery</li>
-                    <li className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Contact us</li>
+                    <li onClick={()=>navigate('/')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Home</li>
+                    <li onClick={()=>navigate('/about-us')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>About us</li>
+                    {/* <li onClick={()=>navigate('/')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Camps</li> */}
+                    <li onClick={()=>navigate('/national-trips')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>National Trips</li>
+                    <li onClick={()=>navigate('/gallery')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Gallery</li>
+                    <li onClick={()=>navigate('/contact-us')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Contact us</li>
                 </ul>
             </div>
             <div className=' flex flex-col gap-3  sm:mt-6'>
                 <p className='font-semibold font-inter text-white'>Contact us </p>
                 <div className='flex flex-col gap-4'>
                     <div className='flex gap-4'>
-                        <img src="/Home/location.svg" alt="" className=''/>
+                        <img loading="lazy" src="/Home/location.svg" alt="" className=''/>
                         <p className='font-inter text-white text-[16px]'>
                         T Hub, Hyderabad, Telangana, 500081
                         </p>
                     </div>
                     <div className='flex gap-4'>
-                        <img src="/Home/Call.svg" alt="" className=''/>
+                        <img loading="lazy" src="/Home/Call.svg" alt="" className=''/>
                         <p className='font-inter text-white text-[16px]'>+91 9247121026</p>
                     </div>
                     <div className='flex gap-4'>
-                        <img src="/Home/Mail.svg" alt="" className=''/>
+                        <img loading="lazy" src="/Home/Mail.svg" alt="" className=''/>
                         <p className='font-inter text-white text-[16px]'>Info@eruditexl.com</p>
                     </div>
                 </div>

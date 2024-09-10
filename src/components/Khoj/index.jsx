@@ -44,7 +44,7 @@ const data = [
       <div className={`flex sm:flex-col ${img ? (reverse ? 'flex-row-reverse' : '') : ''} items-center my-4`}>
         {img && (
           <div className="flex-1">
-            <img src={img} alt="description" className="w-full h-auto" />
+            <img loading="lazy" src={img} alt="description" className="w-full h-auto" />
           </div>
         )}
         <div className={`flex-1 ml-[40px] ${img ? '' : 'w-full'}`}>
@@ -67,7 +67,7 @@ const CaptainKhoj = () => {
 
   return (
     <div className='w-full'>
-<img src="/camps/khoj.png" alt="" className='w-full'/>
+<img loading="lazy" src="/camps/khoj.png" alt="" className='w-full'/>
 <div className="m-[40px] flex gap-[30px] sm:flex-col sm:mx-[20px]">
 <div className="flex-1 flex flex-col gap-3">
 <p className="font-inter font-bold text-[30px]">
@@ -98,7 +98,7 @@ This perfect blend of living arrangements fosters a sense of tranquility and won
     {
         inclExp.map((item,idx)=>(
             <div key={idx} className="flex my-[10px] items-center gap-5">
-                <img src={item.icon} alt="" />
+                <img loading="lazy" src={item.icon} alt="" />
                 <p className='font-bold font-inter'>{item.name}</p>
         </div>
         ))

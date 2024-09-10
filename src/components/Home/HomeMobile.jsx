@@ -73,7 +73,7 @@ const HomeMobile = () => {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                           <img src={images[currentIndex].img} alt="" className="h-[200px]"/>
+                           <img loading="lazy" src={images[currentIndex].img} alt="" className="h-[200px]"/>
                         </motion.div>
                     </AnimatePresence>
                 <HeroButton className={'absolute top-[60%] left-[40%]'} Text={images[currentIndex].title}/>
@@ -101,7 +101,7 @@ const HomeMobile = () => {
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.5 }}
                         >
-                           <img src={textAnimate[currentTextIndex].img} alt="" className="w-full"/>
+                           <img loading="lazy" src={textAnimate[currentTextIndex].img} alt="" className="w-full"/>
                           
                         <div className="flex gap-4 items-center mt-6 ">
                             <Conc/>
@@ -120,7 +120,7 @@ const HomeMobile = () => {
         </div>
         <div 
         className="w-full my-[20px] ">
-                <img src="/mobile/hm4.png" alt="" className="w-full"/>
+                <img loading="lazy" src="/mobile/hm4.png" alt="" className="w-full"/>
 
                 <motion.div  variants={setting}
         initial='initial'
@@ -159,7 +159,7 @@ const HomeMobile = () => {
                     </p>
 
                     
-                <img src="/mobile/hm5.png" alt="" className="w-full"/>
+                <img loading="lazy" src="/mobile/hm5.png" alt="" className="w-full"/>
                 <div className="w-full bg-[#090707]">
                 <div className="mx-[20px] py-[20px]">
                     <AnimatePresence mode="wait">
@@ -210,20 +210,20 @@ const HomeMobile = () => {
             }
             {/* buttons */}
 
-            <img src="/mobile/hm6.png" alt="" className="w-full mt-20"/>
+            <img loading="lazy" src="/mobile/hm6.png" alt="" className="w-full mt-20"/>
             <div className="mx-[20px] flex flex-col gap-5">
                 <p className="text-[25px] font-bold w-[80%]">Trained Activity Provider’s License</p>
                 <p className="text-[16px]">
                 Erudite initiatives Hyderabad is licensed to operate the IAYP ( International Award Of Young People) as a trained activity provider in India.
                 </p>
-            <img src="/mobile/hm7.png" className="w-full" alt="" />
+            <img loading="lazy" src="/mobile/hm7.png" className="w-full" alt="" />
             </div>
             {/* slider */}
 
 
             {/* last */}
             <div className="flex flex-col">
-                <img src="/mobile/hm8.png" alt="" />
+                <img loading="lazy" src="/mobile/hm8.png" alt="" />
                 <div className="p-[20px] bg-[#E9F9FE]">
                     <p className="text-[25px] font-bold ">Tailored Camp Inquiry</p>
                     <p className="mt-4">Are you looking for a tailored camp experience? Contact us and share your preferences. We'll create a unique adventure just for you.</p>

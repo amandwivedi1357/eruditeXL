@@ -4,7 +4,7 @@ const Contactus = () => {
   return (
     <div className="w-full">
         <div className="w-full relative sm:h-[600px] sm:bg-[#01497B]">
-            <img src="/trips/contact.png" alt="" className="w-full h-[671px] sm:hidden"/>
+            <img loading="lazy" src="/trips/contact.png" alt="" className="w-full h-[671px] sm:hidden"/>
 
             <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[551px] sm:h-[570px] rounded-lg card absolute top-[10%] left-[5%]">
                 <div className="m-[40px]">

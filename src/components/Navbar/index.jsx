@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="w-full bg-[#01497B]">
             <div className="w-full bg-[#012945] flex justify-end pr-2">
                 <div className="flex gap-3 sm:hidden">
-                    <img src="/Home/topNav.svg" alt="" />
+                    <img loading="lazy" src="/Home/topNav.svg" alt="" />
                     <p className="font-inter text-white m-auto">
                         IAYP (International Award Of Young People) as a trained activity provider in India.
                     </p>
@@ -63,7 +63,7 @@ const Navbar = () => {
             </div>
             <div className="flex justify-between items-center w-full px-5 py-3">
                 <div className="w-[40%] cursor-pointer" onClick={() => navigate('/')}>
-                    <img src="/Home/logo.svg" alt="" className="m-5 ml-10" />
+                    <img loading="lazy" src="/Home/logo.svg" alt="" className="m-5 ml-10" />
                 </div>
 
                 {/* Desktop Menu */}
@@ -98,7 +98,7 @@ const Navbar = () => {
                                 onMouseEnter={cancelHideDropdown}
                                 onMouseLeave={hideDropdown}
                                 ref={dropdownRef}
-                                className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
+                                className="absolute z-100 left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
                             >
                                 <div className="py-1 group-hover:block hover:block">
                                     <NavLink to="/camps/leadership" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -107,7 +107,7 @@ const Navbar = () => {
                                     <NavLink to="/camps/student-outbound" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         Student Outbound Camp
                                     </NavLink>
-                                    <NavLink to="/camps/inschool" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <NavLink to="/camps/inschool" className="z-100 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         Inschool Camps
                                     </NavLink>
                                     <NavLink to="/camp/captain-khoj" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -154,7 +154,7 @@ const Navbar = () => {
                     <DrawerContent bg={'#01497B'}>
                         <DrawerCloseButton color={'#fff'}/>
                         <DrawerHeader>
-                            <img src="/Home/logo.svg" alt="Logo" className="mx-auto my-3" />
+                            <img loading="lazy" src="/Home/logo.svg" alt="Logo" className="mx-auto my-3" />
                         </DrawerHeader>
 
                         <DrawerBody color={'#fff'}>

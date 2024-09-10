@@ -35,7 +35,7 @@ const Trips = () => {
     ]
   return (
     <div className='w-full'>
-    <img src='/trips/top.png' alt="" className='w-full sm:w-full'/>
+    <img loading="lazy" src='/trips/top.png' alt="" className='w-full sm:w-full'/>
     <div className="p-[40px] sm:p-[20px]">
         <p className="text-inter font-bold text-[30px]">
         Kashmir Quest
@@ -63,7 +63,7 @@ const Trips = () => {
    <div className=''>
    
     <div className='w-full h-[115rem] sm:h-[180rem] mt-[30px] sm:mt-0 relative'>
-        <img src="/trips/day1.png" alt="" className='w-[40%] sm:w-full absolute right-0'/>
+        <img loading="lazy" src="/trips/day1.png" alt="" className='w-[40%] sm:w-full absolute right-0'/>
         <div className="w-[22%]  sm:w-full absolute top-[5%] right-[28%] sm:left-2 sm:top-[12%] flex flex-col gap-2  ">
 
                         <div className='py-4 text-white bg-[#DE8500] w-[7rem] rounded-md text-center'>
@@ -96,13 +96,13 @@ const Trips = () => {
                         <p className="w-[85%] ml-9 sm:ml-9">
                         Enjoy the Famous Shikara Ride in Dal Lake                        </p>
                     </div>
-                    <img src="/trips/zipline.png" alt="" className='absolute top-[28%] left-[35%] sm:top-[18%] sm:left-2' />
-                    <img src="/trips/zip-1.png" alt="" className='absolute top-[28%] left-[35%] sm:hidden' />
-                    <img src="/trips/zip-2.png" alt="" className='absolute top-[29.5%] right-[35%] sm:left-2 sm:top-[18%]' />
-                    <img src="/trips/zip-3.png" alt="" className='absolute top-[31%] right-[2%] sm:right-2 sm:top-[19%] sm:w-[40%]' />
-                    <img src="/trips/day3.png" alt="" className='absolute top-[38%] left-[0] sm:w-full sm:top-[33%]  ' />
-                    <img src="/trips/day5.png" alt="" className='absolute bottom-[12%] left-[0] sm:w-full sm:bottom-[36%]' />
-                    <img src="/trips/day6.png" alt="" className='absolute bottom-[0%] right-[0] sm:w-full sm:bottom-[15%]' />
+                    <img loading="lazy" src="/trips/zipline.png" alt="" className='absolute top-[28%] left-[35%] sm:top-[18%] sm:left-2' />
+                    <img loading="lazy" src="/trips/zip-1.png" alt="" className='absolute top-[28%] left-[35%] sm:hidden' />
+                    <img loading="lazy" src="/trips/zip-2.png" alt="" className='absolute top-[29.5%] right-[35%] sm:left-2 sm:top-[18%]' />
+                    <img loading="lazy" src="/trips/zip-3.png" alt="" className='absolute top-[31%] right-[2%] sm:right-2 sm:top-[19%] sm:w-[40%]' />
+                    <img loading="lazy" src="/trips/day3.png" alt="" className='absolute top-[38%] left-[0] sm:w-full sm:top-[33%]  ' />
+                    <img loading="lazy" src="/trips/day5.png" alt="" className='absolute bottom-[12%] left-[0] sm:w-full sm:bottom-[36%]' />
+                    <img loading="lazy" src="/trips/day6.png" alt="" className='absolute bottom-[0%] right-[0] sm:w-full sm:bottom-[15%]' />
                     <div className="w-[22%] sm:top-[45%] sm:left-4 absolute sm:w-full top-[40%] left-[34%] flex flex-col gap-2  ">
 
 <div className='py-4   text-white bg-[#DE8500] w-[7rem] rounded-md text-center'>

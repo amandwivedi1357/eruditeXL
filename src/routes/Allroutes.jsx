@@ -1,11 +1,18 @@
 import { Route, Routes } from 'react-router-dom'
 import { AboutUs, Camps, ContactUs, Gallery, Home,  NationalTrips } from '../pages'
 import { Khoj } from '../pages/Khoj'
+import FadeUpAnimation from '../utils/FadeUp'
 
 const Allroutes = () => {
   return (
     <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={
+          
+            
+          <Home/>
+          
+       
+          }/>
         <Route path='/about-us' element={<AboutUs/>}/>
         <Route path='/contact-us' element={<ContactUs/>}/>
         <Route path='/camps/:single' element={<Camps/>}/>

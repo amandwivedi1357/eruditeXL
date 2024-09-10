@@ -13,7 +13,7 @@ console.log(single)
 
   return (
    <div className='w-full '>
-    <img src={camp.img} alt="" className='border border-red-500 w-full'/>
+    <img loading="lazy" src={camp.img} alt="" className='border border-red-500 w-full'/>
     <div className="p-[40px] sm:p-[10px]">
         <p className="text-inter font-bold text-[30px]">
           {camp.name}
@@ -56,7 +56,7 @@ console.log(single)
 {
   camp.activities.map((item,idx)=>(
     <div className='flex flex-col gap-3' key={idx}>
-    <img src={item.img} alt="" />
+    <img loading="lazy" src={item.img} alt="" />
     <p className='text-inter font-bold text-[18px]'>{item.head}</p>
     <p className='text-inter text-[16px]'>{item.desc}</p>
     </div>
@@ -76,7 +76,7 @@ export { SingleCamp };
 
 {/* <div className="p-5">
 <h1 className="text-3xl font-bold mb-4">{camp.name}</h1>
-<img src={camp.img} alt={camp.name} className="w-full h-auto mb-4" />
+<img loading="lazy" src={camp.img} alt={camp.name} className="w-full h-auto mb-4" />
 <p className="mb-4">{camp.overview}</p>
 <h2 className="text-2xl font-semibold mb-2">Benefits</h2>
 <ul className="list-disc ml-5 mb-4">
@@ -100,7 +100,7 @@ export { SingleCamp };
 <ul className="list-disc ml-5 mb-4">
   {camp.activities.map((item, index) => (
     <li key={index} className="mb-2">
-      <img src={item.img} alt={item.head} className="w-full h-auto mb-2" />
+      <img loading="lazy" src={item.img} alt={item.head} className="w-full h-auto mb-2" />
       <h3 className="font-semibold">{item.head}</h3>
       <p>{item.desc}</p>
     </li>

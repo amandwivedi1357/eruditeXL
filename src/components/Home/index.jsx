@@ -7,6 +7,8 @@ import { Button } from "../Button/index.jsx"
 import { motion,AnimatePresence } from "framer-motion"
 import "./style.css"
 import HomeMobile from "./HomeMobile.jsx"
+import { btns } from "../../utils/data.jsx"
+import { Fade } from "@chakra-ui/react"
 
 
 
@@ -44,9 +46,17 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         </>)
     },
 ]
+const variants = {
+    initial: { opacity: 0, y: -50 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  };
 
-
-
+const setting = {
+    initial:{ opacity: 0, y: 100 },
+                            animate:{ opacity: 1, y: 0 },
+                            // exit:{ opacity: 0, y: -10 },
+                             transition:{ duration: 0.5 }
+}
 export const HeroButton = ({className,Text}) => {
   return (
     <div className={className}>
@@ -83,10 +93,10 @@ const HomePage = () => {
                 </div>
             </div>
             <div className=" w-[60%] relative">
-                <img className="z-10 absolute top-[40%]" src="/Home/ils1.png" alt="" />
-                <img className="z-10 absolute left-[45%] top-[10%]" src="/Home/ils2.png" alt="" />
-                <img className="z-10 absolute top-[40%] right-[0%]" src="/Home/ils_left.png" alt="" />
-                <img className="z-10 absolute bottom-[5%] left-[35%]" src="/Home/ils_bottom.png" alt="" />
+                <img loading="lazy" className="z-10 absolute top-[40%]" src="/Home/ils1.png" alt="" />
+                <img loading="lazy" className="z-10 absolute left-[45%] top-[10%]" src="/Home/ils2.png" alt="" />
+                <img loading="lazy" className="z-10 absolute top-[40%] right-[0%]" src="/Home/ils_left.png" alt="" />
+                <img loading="lazy" className="z-10 absolute bottom-[5%] left-[35%]" src="/Home/ils_bottom.png" alt="" />
                 <HeroButton className={'z-10 absolute top-[20%] right-[20%]'} Text={'Skill Building'}/>
                 <HeroButton className={'z-10 absolute top-[50%] left-[30%]'} Text={'Personalised Experience'}/>
                 <HeroButton className={'z-10 absolute bottom-[10%] left-[5%]'} Text={'Personality Development'}/>
@@ -112,7 +122,7 @@ const HomePage = () => {
                 </div>
                 <div className="w-[60%]  flex  sm:w-full">
                     <div className="w-full flex flex-col gap-3 flex-1 ">
-                        <img src="/Home/leadership.png" alt="" className="w-[60%] mx-auto"/>
+                        <img loading="lazy" src="/Home/leadership.png" alt="" className="w-[60%] mx-auto"/>
                         <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">Leadership camp</p>
@@ -129,12 +139,12 @@ const HomePage = () => {
                         <p className="w-[85%] mr-2 ml-9">
                         Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.
                         </p>
-                        <img src="/Home/outbound.png" alt="" className="w-[60%] mx-auto"/>
+                        <img loading="lazy" src="/Home/outbound.png" alt="" className="w-[60%] mx-auto"/>
                     </div>
                 </div>
             </div>
             <div className="w-[60%]  my-[70px] mx-[40px] flex items-center gap-10">
-                <img src="/Home/school.png" alt="" />
+                <img loading="lazy" src="/Home/school.png" alt="" />
                 <div className="flex flex-col gap-3">
 
                     <div className="flex gap-5 items-center">
@@ -146,14 +156,52 @@ const HomePage = () => {
             </div>
         </div>
 
-        {/* <div className="mx-[40px]">
-            Mukteshwar khoj
-        </div> */}
 
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="w-full flex ">
+            <div className="w-[60%] ">
+                <img src="/Home/mukteshwar.png" alt="" />
+            </div>
+            <div className="w-[40%] ">
+                <div className="m-[50px] flex flex-col gap-5 ">
+                <p className="font-bold text-[40px] font-inter">Captain Khoj Mukteshwar Camp</p>
+                <p>Join us for a six night, Seven day summer camp in the scenic beauty of Nainital and Jim Corbett. Enjoy thrilling activities, self-discovery, and a deep connection with nature for an unforgettable adventure.</p>
+                <div className="flex flex-wrap gap-3">
+                    {
+                    btns.map((item,idx)=>(
+                        <motion.button key={idx}  variants={setting}
+                        initial='initial'
+                        whileInView='animate'
+                        className="p-3 border text-gray-600 hover:text-white hover:border-white border-gray-600 rounded-full hover:bg-[#DE8500] group:"
+                        >
+                            
+                                {item.text}
+                        </motion.button>
+                    ))
+                    }
+                    </div>
+                    <div className=" self-start">
+
+                    <Button  text={'Explore Now'}/>
+                    </div>
+                    
+                </div>
+            </div>
+        </motion.div>
+      
         {/* Kashmir quest starts */}
-            <FadeUpAnimation>
+           
 
-        <div className=" w-full">
+        <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className=" w-full">
             <div className="flex flex-col gap-4 items-center justify-center">
                 <p className="font-bold text-[40px] font-inter">Kashmir Quest</p>
                 <p className="w-[50%] text-center">
@@ -161,7 +209,7 @@ const HomePage = () => {
                 </p>
             </div>
             <div className="w-full relative">
-            <img src="/Home/kashmir.png" alt="" className="w-full" />
+            <img loading="lazy" src="/Home/kashmir.png" alt="" className="w-full" />
 
             <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[30%] left-[8%]">
                 <div className="mx-[36px] my-[25px]">
@@ -185,10 +233,15 @@ const HomePage = () => {
                 <Dots imgIndex={currentIndex} setImgIndex={setCurrentIndex} arrayName={textAnimate}/>
             </div>
         </div>
-        </div>
-            </FadeUpAnimation>
+        </motion.div>
+           
 
-        <div className="w-full ">
+        <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="w-full ">
         <div className="flex flex-col gap-4 items-center justify-center">
                 <p className="font-bold text-[40px] font-inter">Welcome To Eruditexl</p>
                 <p className="w-[50%] text-center">
@@ -222,13 +275,12 @@ const HomePage = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Certified educators
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.                        </p>
                     </div>
                        
                 </div>
@@ -238,13 +290,12 @@ const HomePage = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Reflective learning
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        With 25 years of rich experience in outbound experiential learning.                        </p>
                     </div>
                        
                 </div>
@@ -254,13 +305,12 @@ const HomePage = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Top quality equipments 
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        With 25 years of rich experience in outbound experiential learning.                        </p>
                     </div>
                        
                 </div>
@@ -270,47 +320,58 @@ const HomePage = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Safety First
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        High focus on both the physical and psychological safety of participants.                        </p>
                     </div>
                        
                 </div>
 
-            <img src="/Home/erudite.png" alt="" className="absolute bottom-0 w-full"/>
+            <img loading="lazy" src="/Home/erudite.png" alt="" className="absolute bottom-0 w-full"/>
             </div>
-        </div>
-        <div className="w-full ">
-        <div className="flex flex-col gap-4 items-center justify-center">
+        </motion.div>
+        <div
+        
+        className="w-full ">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-4 items-center justify-center">
                 <p className="font-bold text-[40px] font-inter">Trained activity provider’s license </p>
                 <p className="w-[50%] text-center">
                 Erudite initiatives Hyderabad is licensed to operate the IAYP ( International Award Of Young People) as a trained activity provider in India.
                 </p>
 
-            </div>
+            </motion.div>
             <div className="flex justify-around gap-5 ">
-                <img src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
-                <img src="/Home/india.png" alt="" />
-                <img src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <img loading="lazy" src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <img loading="lazy" src="/Home/india.png" alt="" />
+                <img loading="lazy" src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
 
             </div>
         </div>
         <div className="w-full">
-        <div className="flex flex-col gap-4 items-center justify-center">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-4 items-center justify-center">
                 <p className="font-bold text-[40px] font-inter">Upcoming Events </p>
                 <p className="w-[50%] text-center">
                 Our camps offer hands on learning experiences in settings where campers can connect with nature acquire life skills and forge lifelong friendships.
                 </p>
 
-            </div>
+            </motion.div>
             <div className="w-full relative ">
-                <img src="/Home/mount.png" alt="" className="w-full"/>
+                <img loading="lazy" src="/Home/mount.png" alt="" className="w-full"/>
                 <div className="flex gap-3 flex-col absolute top-32 left-[40%]">
-                    <img src="/Home/skygaze.png" alt="" className="w-[287px]"/>
+                    <img loading="lazy" src="/Home/skygaze.png" alt="" className="w-[287px]"/>
                     <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
                     <p className="text-[16px] font-inter w-[60%]">With 25 years of rich experience in outbound experiential learning.</p>
                 </div>
@@ -318,7 +379,7 @@ const HomePage = () => {
         </div>
         <div className="w-full bg-[#E9F9FE] flex mt-[100px]">
             <div className="flex-1">
-            <img src="/camps/tailored.png" alt="" className="w-full"/>
+            <img loading="lazy" src="/camps/tailored.png" alt="" className="w-full"/>
             </div>
             <div className="flex-1 flex  items-center">
                 <div className="ml-[64px]">

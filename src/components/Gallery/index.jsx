@@ -53,7 +53,7 @@ const GalleryPage = () => {
                         className="p-2 relative cursor-pointer"
                         onClick={() => openModal(idx, imgIdx)}
                       >
-                        <img
+                        <img loading="lazy"
                           src={image}
                           alt={`Gallery ${data.head} ${imgIdx}`}
                           className="w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
@@ -84,7 +84,7 @@ const GalleryPage = () => {
                         className="p-2 relative cursor-pointer"
                         onClick={() => openModal(idx, imgIdx)}
                       >
-                        <img
+                        <img loading="lazy"
                           src={image}
                           alt={`Gallery ${data.head} ${imgIdx}`}
                           className="w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
@@ -114,7 +114,7 @@ const GalleryPage = () => {
               aria-label="Previous"
               className="absolute left-4 top-1/2 transform z-20 text-white"
             />
-            <img src={galleryTabs[currentTab].img[currentImageIndex]} alt="Selected" className="max-h-screen" />
+            <img loading="lazy" src={galleryTabs[currentTab].img[currentImageIndex]} alt="Selected" className="max-h-screen" />
             <IconButton
               icon={<FaArrowRight />}
               onClick={nextImage}
