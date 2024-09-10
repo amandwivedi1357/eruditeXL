@@ -18,7 +18,7 @@ const About = () => {
     //     })
     // }, [count]);
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-hidden'>
                <div className='m-[40px]  flex sm:block sm:m-[20px] '>
                 <div className="flex flex-col gap-[20px] flex-1 ">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
@@ -43,7 +43,7 @@ const About = () => {
                 <div className="flex-1 ">
                     <img loading="lazy" src="/about/vision.png" alt="" className='w-full'/>
                 </div>
-                <div className="flex justify-center flex-col gap-[20px] flex-1 sm:m-[20px]">
+                <div className="flex justify-center flex-col gap-[20px] flex-1 sm:mx-[20px]">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px] sm:mt-5'>
                     Vision
                     </p>
@@ -143,7 +143,7 @@ const About = () => {
 
             <img loading="lazy" src="/Home/erudite.png" alt="" className="w-full absolute bottom-0"/>
             </div>
-            <div className='hidden sm:block sm:w-full m-[20px]'>
+            <div className='hidden sm:block sm:w-full mx-[20px] mt-[-15px]'>
             <p className='text-[25px] font-bold '>Why Choose us</p>
             <p className='text-[16px] mt-3'>Erudite Initiatives, particularly through Erudite Experiential Learning, began its journey in 1998 with a unique outbound overnight camp for Oakridge International School. </p>
             <div className=" w-full  flex flex-col gap-4 mt-5">

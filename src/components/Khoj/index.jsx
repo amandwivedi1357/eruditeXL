@@ -30,32 +30,32 @@ const inclExp = [
 ]
 
 const data = [
-    {  head: 'Content for first object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:1 },
-    { img: '/camps/img2.png', head: 'Content for second object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:2 },
-    { img: '/camps/img3.png', head: 'Content for third object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:3 },
-    { img: '/camps/img4.png', head: 'Content for third object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:4 },
-    { img: '/camps/img5.png', head: 'Content for third object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:5 },
-    { img: '/camps/img6.png', head: 'Content for third object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:6 },
-    { img: '/camps/img7.png', head: 'Content for third object',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:7 },
+    {  head: 'Delhi - Haldwani - Gajrola',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:1 },
+    { img: '/camps/img2.png', head: 'Camp Nirmit',desc:'Have breakfast in Haldwani, proceed to Camp Nirmit at 11:00 a.m, followed by an acclimatisation trek to a village, evening activities, bonfire, and an overnight stay.',num:2 },
+    { img: '/camps/img3.png', head: 'Trek to valley Point',desc:'Embark on an early morning 5 km trek to the valley point for rappelling and ziplining, have lunch at the activity point, then return to the campsite for an overnight stay.',num:3 },
+    { img: '/camps/img4.png', head: 'Farming Activities & Cultural Interactions',desc:'Pack up early in the morning and visit a village for farming activities and cultural interactions. Reach Diganta Resorts around lunchtime for lunch and stay, followed by evening DJ and music.',num:4 },
+    { img: '/camps/img5.png', head: 'Bheemtal - Nainital',desc:'Check out after breakfast, drive to Bheemtal for kayaking, have a working lunch at the lake, then reach FOXOSO Hotel and drive to Nainital Mall Road in the evening for sightseeing and reflections.',num:5 },
+    { img: '/camps/img6.png', head: 'Jim Corbett',desc:'Check out after breakfast and drive to Jim Corbett, check in and have lunch, followed by a 3:00 p.m. jeep safari, then return to Tatva Grand Resort for evening snacks, pool activities, a film about Jim Corbett, dinner, and an overnight stay.',num:6 },
+    { img: '/camps/img7.png', head: 'Back to Delhi',desc:'Check out after breakfast, drive to Delhi with a transit lunch at Gajrola, and drop off at Delhi Airport at 3:00 p.m.',num:7 },
     // Add more objects...
   ];
   const ImageTextSection = ({ img, day, head, desc, reverse }) => {
     return (
-      <div className={`flex sm:flex-col ${img ? (reverse ? 'flex-row-reverse' : '') : ''} items-center my-4`}>
+      <div className={`flex  sm:flex-col ${img ? (reverse ? 'flex-row-reverse' : '') : ''} items-center my-4`}>
         {img && (
           <div className="flex-1">
             <img loading="lazy" src={img} alt="description" className="w-full h-auto" />
           </div>
         )}
-        <div className={`flex-1 ml-[40px] ${img ? '' : 'w-full'}`}>
+        <div className={`flex-1  ml-[40px] ${img ? '' : 'w-full'}`}>
           <button className='p-3 px-5 bg-[#DE8500] rounded-lg text-white'>
             Day {day}
           </button>
           <div className='flex gap-4 mt-4 items-center '>
             <Conc />
-            <p className="font-bold font-inter text-[20px]">{head}</p>
+            <p className="font-bold  font-inter text-[20px]">{head}</p>
           </div>
-          <p className='ml-[60px] w-[40%]'>
+          <p className='ml-[60px] w-[40%] sm:w-[85%] sm:ml-10'>
             {desc}
           </p>
         </div>
@@ -66,11 +66,11 @@ const data = [
 const CaptainKhoj = () => {
 
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-hidden'>
 <img loading="lazy" src="/camps/khoj.png" alt="" className='w-full'/>
-<div className="m-[40px] flex gap-[30px] sm:flex-col sm:mx-[20px]">
+<div className="m-[40px] flex gap-[30px] sm:flex-col sm:mx-[20px] sm:mt-[10px]">
 <div className="flex-1 flex flex-col gap-3">
-<p className="font-inter font-bold text-[30px]">
+<p className="font-inter font-bold text-[30px] sm:text-[25px]">
 Captain Khoj Mukteshwar Camp
 </p>
 <p>

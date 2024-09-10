@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Footer, HomePage, Navbar } from '../../components'
 
-
 const Home = () => {
   
   return (

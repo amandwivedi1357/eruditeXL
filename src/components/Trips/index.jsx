@@ -89,12 +89,12 @@ const Trips = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        Arrival and Houseboat Stay on Dal Lake
+                        Excursion to Gulmarg
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9 sm:ml-9">
-                        Enjoy the Famous Shikara Ride in Dal Lake                        </p>
+                        Admire the Panoramic Views from Asia's Highest Cable Car                    </p>
                     </div>
                     <img loading="lazy" src="/trips/zipline.png" alt="" className='absolute top-[28%] left-[35%] sm:top-[18%] sm:left-2' />
                     <img loading="lazy" src="/trips/zip-1.png" alt="" className='absolute top-[28%] left-[35%] sm:hidden' />
@@ -165,7 +165,7 @@ Visit to Saffron Fields and Houseboat Making Unit
 </p>
     </div>
 
-<p className="w-[85%] ml-9 sm:ml-9 sm:ml-9">
+<p className="w-[85%] ml-9 sm:ml-9 ">
 Learn about saffron cultivation and its significance, and understand the intricate process of houseboat construction.                       </p>
 </div>
     </div>
