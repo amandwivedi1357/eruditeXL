@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Conc from "../../utils/conc.jsx"
-import FadeUpAnimation from "../../utils/FadeUp.jsx"
+// import FadeUpAnimation from "../../utils/FadeUp.jsx"
 import { Button } from "../Button/index.jsx"
 import { motion,AnimatePresence } from "framer-motion"
 import "./style.css"
 import HomeMobile from "./HomeMobile.jsx"
 import { btns } from "../../utils/data.jsx"
-import { Fade } from "@chakra-ui/react"
+// import { Fade } from "@chakra-ui/react"
 
 
 
@@ -46,10 +46,10 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         </>)
     },
 ]
-const variants = {
-    initial: { opacity: 0, y: -50 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
+// const variants = {
+//     initial: { opacity: 0, y: -50 },
+//     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+//   };
 
 const setting = {
     initial:{ opacity: 0, y: 100 },
@@ -69,17 +69,31 @@ export const HeroButton = ({className,Text}) => {
 
 export default HeroButton
 const HomePage = () => {
-
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % textAnimate.length);
-        }, 5000); // Switch every 5 seconds
+    const intervalRef = useRef(null);  // useRef to store the interval ID
 
-        return () => clearInterval(interval); // Clean up the interval on unmount
-    }, []);
-    
+    // Function to reset and start the timer
+    const resetInterval = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);  // Clear the existing interval
+      }
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % textAnimate.length);  // Move to next text
+      }, 5000);  // 5 seconds interval
+    };
+  
+    // Call resetInterval whenever currentIndex changes or component mounts
+    useEffect(() => {
+      resetInterval();  // Start the timer when component mounts
+      return () => clearInterval(intervalRef.current);  // Cleanup on unmount
+    }, [currentIndex]);
+  
+    // Handle dot click or other interaction
+    const handleInteraction = (index) => {
+      setCurrentIndex(index);  // Update the current index
+      resetInterval();  // Reset the interval timer on interaction
+    };
   return (
     <div className='w-full'>
         <div className="sm:hidden w-full">
@@ -230,7 +244,7 @@ const HomePage = () => {
                         </motion.div>
                     </AnimatePresence>
                 </div>
-                <Dots imgIndex={currentIndex} setImgIndex={setCurrentIndex} arrayName={textAnimate}/>
+                <Dots imgIndex={currentIndex} setImgIndex={handleInteraction} arrayName={textAnimate}/>
             </div>
         </div>
         </motion.div>
@@ -368,14 +382,26 @@ const HomePage = () => {
                 </p>
 
             </motion.div>
-            <div className="w-full relative ">
-                <img loading="lazy" src="/Home/mount.png" alt="" className="w-full"/>
-                <div className="flex gap-3 flex-col absolute top-32 left-[40%]">
-                    <img loading="lazy" src="/Home/skygaze.png" alt="" className="w-[287px]"/>
-                    <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
-                    <p className="text-[16px] font-inter w-[60%]">With 25 years of rich experience in outbound experiential learning.</p>
-                </div>
-            </div>
+            <div className="w-full relative">
+  <img loading="lazy" src="/Home/mount.png" alt="" className="w-full" />
+
+  <div className="flex gap-10  absolute top-12 left-[50%] transform -translate-x-1/2 space-x-8 md:flex-row items-center">
+    {/* First Card */}
+    <div className="flex gap-3 flex-col items-center">
+      <img loading="lazy" src="/Home/skygaze.png" alt="" className="w-[287px]" />
+      <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
+      <p className="text-[16px] font-inter text-center w-[70%]">With 25 years of rich experience in outbound experiential learning.</p>
+    </div>
+
+    {/* Second Card */}
+    <div className="flex gap-3 flex-col items-center">
+    <img loading="lazy" src="/mobile/space.jpg" alt="" className="w-[277px] rounded-md" />
+    <p className="text-[18px] font-bold font-inter">Space Settlement Contest</p>
+      <p className="text-[16px] font-inter text-center w-[70%]">Join us in exploring new frontiers through exciting challenges in space science and technology.</p>
+    </div>
+  </div>
+</div>
+
         </div>
         <div className="w-full bg-[#E9F9FE] flex mt-[100px]">
             <div className="flex-1">
@@ -428,3 +454,5 @@ export const Dots = ({ imgIndex, setImgIndex,arrayName }) => {
     );
   };
 export  {HomePage}
+
+

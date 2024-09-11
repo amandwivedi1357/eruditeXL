@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div>
+        <div className='sm:mt-[-40px]'>
             <p className='text-white font-inter text-center py-[40px]'>All © rights are reserved by Eruditexl.com | Developed By Rayformula</p>
         </div>
     </div>

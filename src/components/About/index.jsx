@@ -82,13 +82,12 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Certified educators
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.                        </p>
                     </div>
                        
                 </div>
@@ -98,13 +97,11 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
-                        </p>
+                        Reflective learning                        </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        With 25 years of rich experience in outbound experiential learning.                        </p>
                     </div>
                        
                 </div>
@@ -114,13 +111,12 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Top quality equipments 
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        With 25 years of rich experience in outbound experiential learning.                        </p>
                     </div>
                        
                 </div>
@@ -130,13 +126,12 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Safety First
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        High focus on both the physical and psychological safety of participants.                        </p>
                     </div>
                        
                 </div>
