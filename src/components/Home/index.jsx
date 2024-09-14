@@ -266,7 +266,7 @@ const HomePage = () => {
                 </div>
 
             </div>
-            <div className="h-[800px] relative">
+            <div className="h-[1000px] relative">
                 <div className="absolute w-[351px] top-[30%] left-[10%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
@@ -328,7 +328,7 @@ const HomePage = () => {
                     </div>
                        
                 </div>
-                <div className="absolute w-[351px] top-[40%] right-[1%] flex flex-col gap-4 ">
+                <div className="absolute z-100 w-[351px] top-[40%] right-[1%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -363,9 +363,9 @@ const HomePage = () => {
 
             </motion.div>
             <div className="flex justify-around gap-5 ">
-                <img loading="lazy" src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
-                <img loading="lazy" src="/Home/india.png" alt="" />
-                <img loading="lazy" src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <img loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <img loading="lazy"  src="/Home/india.png" alt="" />
+                <img loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
 
             </div>
         </div>

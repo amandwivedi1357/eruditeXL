@@ -59,7 +59,7 @@ const About = () => {
                     </p>
                 </div>
                </div>
-               <div className="h-[800px] relative sm:hidden">
+               <div className="h-[1000px] relative sm:hidden">
                 <div className="absolute w-[351px] top-[30%] left-[10%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
@@ -120,8 +120,8 @@ const About = () => {
                     </div>
                        
                 </div>
-                <div className="absolute w-[351px] top-[40%] right-[1%] flex flex-col gap-4 ">
-                    <div className="w-full flex flex-col gap-2  ">
+                <div className="absolute z-10 w-[351px] top-[37%] right-[1%] flex flex-col gap-4 ">
+                    <div className="w-full flex flex-col gap-2">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -160,7 +160,19 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Certified educators
+                        </p>
+                            </div>
+                        
+                        <p className="w-[85%] ml-9">
+                        Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.                        </p>
+                    </div>
+                    <div className="w-full flex flex-col gap-2  ">
+
+                            <div className="flex gap-4 items-center">
+                            <Conc/>
+                        <p className="font-bold font-inter text-20px">
+                        Reflective learning
                         </p>
                             </div>
                         
@@ -173,33 +185,19 @@ const About = () => {
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Top quality equipments
                         </p>
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
+                        With 25 years of rich experience in outbound experiential learning.                        </p>
                     </div>
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">
-                        25 years of expertise
-                        </p>
-                            </div>
-                        
-                        <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.
-                        </p>
-                    </div>
-                    <div className="w-full flex flex-col gap-2  ">
-
-                            <div className="flex gap-4 items-center">
-                            <Conc/>
-                        <p className="font-bold font-inter text-20px">
-                        25 years of expertise
+                        Safety First
                         </p>
                             </div>
                         
