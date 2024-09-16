@@ -237,7 +237,7 @@ const HomePage = () => {
             <div className="w-full relative">
             <img loading="lazy" src="/Home/kashmir.png" alt="" className="w-full" />
 
-            <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[30%] left-[8%]">
+            <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[15%] left-[8%]">
                 <div className="mx-[36px] my-[25px]">
                     <AnimatePresence mode="wait">
                         <motion.div
