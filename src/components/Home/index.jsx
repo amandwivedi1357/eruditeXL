@@ -22,19 +22,19 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         </>)
     },
     {
-        head: 'Cultural Immersion',
+        head: 'Cultural & Heritage',
         desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
-
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
+       Kashmir's unique cultural blend, encompassing diverse religions, languages, and cultures, showcases India's unity in diversity. Srinagar, as a part of this region, reflects this blend through its historical and religious sites.
+       <br />
+       <br />
+        The region's rich cultural heritage, from Sanskrit and Persian learning centers to Islamic influences, exemplifies the harmonious coexistence of different traditions.
         </>)
     },
     {
-        head: 'Regional Immersion',
+        head: 'Kashmir Folk Music Chakri',
         desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
-
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
+       It is most popular form of Kashmiri folk music. It has some resemblance with chakra of mountaineous regions of Uttar Pradesh. <br /> <br />
+        Normally Garaha, Sarangi, Rabab were the musical instruments used in the past. But now thw harmonium too has made its way in its presentation.
         </>)
     },
     {
@@ -130,20 +130,24 @@ const HomePage = () => {
                    
                     <div className=" self-start">
 
-                    <Button  text={'Explore Now'}/>
+                    {/* <Button  text={'Explore Now'}/> */}
                     </div>
                     
                 </div>
                 <div className="w-[60%]  flex  sm:w-full">
                     <div className="w-full flex flex-col gap-3 flex-1 ">
-                        <img loading="lazy" src="/Home/leadership.png" alt="" className="w-[60%] mx-auto"/>
+                        <img loading="lazy" src="/Home/astro1.svg" alt="" className="w-[60%] mx-auto"/>
                         <div className="flex gap-4 items-center">
                             <Conc/>
-                        <p className="font-bold font-inter text-20px">Leadership camp</p>
+                        <p className="font-bold font-inter text-20px">Space Settlement camp</p>
                         </div>
                         <p className="w-[85%] mr-2 ml-9">
                         Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.  
                         </p>
+                        <div className="self-start ml-9">
+
+                        <Button onClick={'camps/leadership'} text={'More'}/>
+                        </div>
                     </div>
                     <div className="w-full flex flex-col gap-5 flex-1 ">
                         <div className="flex gap-4 items-center">
@@ -153,12 +157,16 @@ const HomePage = () => {
                         <p className="w-[85%] mr-2 ml-9">
                         Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.
                         </p>
-                        <img loading="lazy" src="/Home/outbound.png" alt="" className="w-[60%] mx-auto"/>
+                        <div className="self-start ml-9">
+
+                        <Button onClick={'camps/student-outbound'} text={'More'}/>
+                        </div>
+                        <img loading="lazy" src="/Home/outbound.svg" alt="" className="w-[60%] mx-auto"/>
                     </div>
                 </div>
             </div>
             <div className="w-[60%]  my-[70px] mx-[40px] flex items-center gap-10">
-                <img loading="lazy" src="/Home/school.png" alt="" />
+                <img loading="lazy" src="/Home/inschool.svg" alt="" />
                 <div className="flex flex-col gap-3">
 
                     <div className="flex gap-5 items-center">
@@ -166,6 +174,10 @@ const HomePage = () => {
                         <p className="font-bold font-inter text-20px">In school camp</p>
                     </div>
                     <p className="w-[85%] mr-2 ml-9">Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.</p>
+                    <div className="self-start ml-9">
+
+                        <Button onClick={'camps/inschool'} text={'More'}/>
+                        </div>
                 </div>
             </div>
         </div>
@@ -200,7 +212,7 @@ const HomePage = () => {
                     </div>
                     <div className=" self-start">
 
-                    <Button  text={'Explore Now'}/>
+                    <Button onClick='camp/captain-khoj'  text={'Explore Now'}/>
                     </div>
                     
                 </div>
@@ -262,7 +274,7 @@ const HomePage = () => {
                 Erudite Initiatives, particularly through Erudite Experiential Learning, began its journey in 1998 with a unique outbound overnight camp for Oakridge International School. 
                 </p>
                 <div className="mt-[20px]">
-                <Button text={'Explore Now'}/>
+                <Button onClick='about-us' text={'Know More'}/>
                 </div>
 
             </div>
@@ -417,7 +429,7 @@ const HomePage = () => {
                     </p>
 
                     <div className="mt-[30px] ">
-                    <Button text={'Contact Now'}/>
+                    <Button onClick={'contact-us'} text={'Contact Now'}/>
                     </div>
                 </div>
             </div>

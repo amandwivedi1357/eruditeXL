@@ -53,8 +53,8 @@ const Navbar = () => {
 
     return (
         <div className="w-full bg-[#01497B]">
-            <div className="w-full bg-[#012945] flex justify-end pr-2">
-                <div className="flex gap-3 sm:hidden">
+            <div className="w-full bg-[#012945] flex  pr-2 py-3">
+                <div className="flex gap-3 sm:hidden animate-marquee whitespace-nowrap">
                     <img loading="lazy" src="/Home/topNav.svg" alt="" />
                     <p className="font-inter text-white m-auto">
                         IAYP (International Award Of Young People) as a trained activity provider in India.
@@ -102,7 +102,7 @@ const Navbar = () => {
                             >
                                 <div className="py-1 group-hover:block hover:block">
                                     <NavLink to="/camps/leadership" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                        Leadership Camps
+                                       Space Settlement Camp
                                     </NavLink>
                                     <NavLink to="/camps/student-outbound" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                         Student Outbound Camp
@@ -183,7 +183,7 @@ const Navbar = () => {
     <Collapse in={isDropdownOpen} animateOpacity>
         <div className="ml-4">
             <NavLink to="/camps/leadership" onClick={onClose} className="block px-4 py-2 text-sm">
-                Leadership Camps
+                Space Settlement Camp
             </NavLink>
             <NavLink to="/camps/student-outbound" onClick={onClose} className="block px-4 py-2 text-sm">
                 Student Outbound Camp

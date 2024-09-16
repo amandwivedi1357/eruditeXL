@@ -6,6 +6,15 @@ export default {
     'node_modules/preline/dist/*.js',
   ],
   theme: {
+    keyframes: {
+      marquee: {
+        '0%': { transform: 'translateX(100%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+    },
+    animation: {
+      marquee: 'marquee 15s linear infinite',
+    },
     screens: { md: { max: "1050px" }, sm: { max: "550px" } },
     extend: {
       backgroundColor: {
