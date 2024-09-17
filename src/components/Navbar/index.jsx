@@ -16,6 +16,7 @@ import {
     StatDownArrow,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import Marquee from 'react-fast-marquee';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -53,12 +54,15 @@ const Navbar = () => {
 
     return (
         <div className="w-full bg-[#01497B]">
-            <div className="w-full bg-[#012945] flex  pr-2 py-3">
-                <div className="flex gap-3 sm:hidden animate-marquee whitespace-nowrap">
+            <div className="w-full bg-[#012945] py-3 overflow-hidden">
+                <div className="flex gap-3 sm:hidden">
+                    <Marquee pauseOnHover speed={70}>
+
                     <img loading="lazy" src="/Home/topNav.svg" alt="" />
                     <p className="font-inter text-white m-auto">
                         IAYP (International Award Of Young People) as a trained activity provider in India.
                     </p>
+                    </Marquee>
                 </div>
             </div>
             <div className="flex justify-between items-center w-full px-5 py-3">

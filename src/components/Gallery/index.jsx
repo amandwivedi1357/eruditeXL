@@ -94,6 +94,11 @@ const GalleryPage = () => {
 
   return (
     <div className="w-full">
+      <div className="w-[90%] mx-auto sm:w-[95%]">
+      <div className="my-5">
+        <p className="font-bold text-[40px] sm:text-[24px]">Gallery</p>
+      </div>
+      
       {!isMobile ? (
         <Tabs isFitted variant="enclosed">
           <TabList mb="1em">
@@ -154,6 +159,7 @@ const GalleryPage = () => {
           </Button>
         </ModalContent>
       </Modal>
+      </div>
     </div>
   );
 };

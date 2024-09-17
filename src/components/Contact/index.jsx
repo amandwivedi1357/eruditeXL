@@ -1,12 +1,11 @@
-import { Divider } from "@chakra-ui/react"
 
 const Contactus = () => {
   return (
     <div className="w-full">
         <div className="w-full relative sm:h-[600px] sm:bg-[#01497B]">
-            <img loading="lazy" src="/trips/contact.png" alt="" className="w-full h-[671px] sm:hidden"/>
+            <img loading="lazy" src="/trips/contact.png" alt="" className="w-full h-[701px] sm:hidden"/>
 
-            <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[551px] sm:h-[570px] rounded-lg card absolute top-[10%] left-[5%]">
+            <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[631px] sm:h-[570px] rounded-lg card absolute top-[5%] left-[5%]">
                 <div className="m-[40px]">
                     <p className="text-white text-[30px] font-inter font-bold">
                         Contact us
@@ -43,6 +42,13 @@ const Contactus = () => {
     <div className="w-full md:w-[48%] mb-8">
       <input
         type="text"
+        placeholder="School Name"
+        className="w-full text-white bg-transparent border-b border-white border-opacity-40 placeholder-white focus:outline-none pb-4 sm:pb-[6px]"
+      />
+    </div>
+    <div className="w-full md:w-[48%] mb-8">
+      <input
+        type="number"
         placeholder="Phone Number"
         className="w-full text-white bg-transparent border-b border-white border-opacity-40 placeholder-white focus:outline-none pb-4 sm:pb-[6px]"
       />

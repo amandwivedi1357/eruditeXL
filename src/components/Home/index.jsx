@@ -22,7 +22,7 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         </>)
     },
     {
-        head: 'Cultural & Heritage',
+        head: 'Culture & Heritage',
         desc:(<>
        Kashmir's unique cultural blend, encompassing diverse religions, languages, and cultures, showcases India's unity in diversity. Srinagar, as a part of this region, reflects this blend through its historical and religious sites.
        <br />
@@ -37,14 +37,14 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         Normally Garaha, Sarangi, Rabab were the musical instruments used in the past. But now thw harmonium too has made its way in its presentation.
         </>)
     },
-    {
-        head: 'National Immersion',
-        desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
+//     {
+//         head: 'National Immersion',
+//         desc:(<>
+//         Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
 
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
-        </>)
-    },
+// Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
+//         </>)
+//     },
 ]
 // const variants = {
 //     initial: { opacity: 0, y: -50 },
@@ -165,8 +165,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-[60%]  my-[70px] mx-[40px] flex items-center gap-10">
-                <img loading="lazy" src="/Home/inschool.svg" alt="" />
+            <div className="w-[30%] mt-[-180px] mx-[40px] items-center flex flex-col  gap-10">
+                <img loading="lazy" src="/Home/inschool.svg" alt="" className="w-[250px]"/>
                 <div className="flex flex-col gap-3">
 
                     <div className="flex gap-5 items-center">
@@ -397,17 +397,17 @@ const HomePage = () => {
             <div className="w-full relative">
   <img loading="lazy" src="/Home/mount.png" alt="" className="w-full" />
 
-  <div className="flex gap-10  absolute top-12 left-[50%] transform -translate-x-1/2 space-x-8 md:flex-row items-center">
+  <div className="flex gap-10   absolute top-12 left-[50%] transform -translate-x-1/2 space-x-8 md:flex-row items-center">
     {/* First Card */}
     <div className="flex gap-3 flex-col items-center">
       <img loading="lazy" src="/Home/skygaze.png" alt="" className="w-[287px]" />
       <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
-      <p className="text-[16px] font-inter text-center w-[70%]">With 25 years of rich experience in outbound experiential learning.</p>
+      <p className="text-[16px] font-inter text-center w-[80%]">With 25 years of rich experience in outbound experiential learning.</p>
     </div>
 
     {/* Second Card */}
-    <div className="flex gap-3 flex-col items-center">
-    <img loading="lazy" src="/mobile/space.jpg" alt="" className="w-[277px] rounded-md" />
+    <div className="flex  gap-3 flex-col items-center">
+    <img loading="lazy" src="/mobile/space.jpg" alt="" className="w-[247px] h-[237px] rounded-md" />
     <p className="text-[18px] font-bold font-inter">Space Settlement Contest</p>
       <p className="text-[16px] font-inter text-center w-[70%]">Join us in exploring new frontiers through exciting challenges in space science and technology.</p>
     </div>
