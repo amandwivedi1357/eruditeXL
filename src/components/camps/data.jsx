@@ -1,29 +1,29 @@
 export const data = [
     {
-        route:'leadership',
-        img:'/camps/leadership.png',
-        name:'Leadership Camps',
-        overview:'Leadership camps offer immersive experiences designed to develop leadership skills through hands-on activities and challenges. Participants engage in team-building exercises, problem-solving tasks, and outdoor adventures that foster self-confidence, communication, and decision-making abilities. These camps aim to inspire and empower individuals to lead effectively in various aspects of their lives, providing a foundation for personal and professional growth.',
+        route:'space-settlement-contest',
+        img:'/khoj/ssc.webp',
+        name:'Space Settlement Contest',
+        overview:'The NSS/NASA Space Settlement Contest is an annual competition that challenges students in grades 6-12 to design habitable space settlements. The contest encourages the application of multiple disciplines, including science, engineering, technology, and the arts. Winning entries are recognized internationally and often lead to further educational and career opportunities.',
         benefit:[
             {
-                head:'Development of Leadership Skills',
-                desc:'Leadership camps help students develop key qualities like decision-making, problem-solving, and effective communication. Through adventure activities and team challenges, students simulate real-life scenarios, take initiative, and lead their peers, preparing them for future leadership roles.'
+                head:'Enhances academic skills',
+                desc:'Participating in the contest helps students develop essential skills in science, engineering, technology, and the arts. It encourages the application of multiple disciplines, providing a well-rounded educational experience that prepares students for future academic and professional challenges.'
             },
             {
-                head:'Teamwork and Collaboration',
-                desc:'Team activities and combat scenarios emphasize the importance of teamwork and collaboration. Students learn to trust and support each other, fostering unity and collective responsibility essential in both academic and professional environments.'
+                head:'Fosters a Spirit of Healthy Competition',
+                desc:'The contest offers a platform for students to challenge themselves academically and develop a competitive spirit in a fun and engaging manner. It motivates students to push their boundaries and strive for excellence.'
             },
             {
-                head:'Enhanced self - reliance and Resilience',
-                desc:"Staying in tented accommodation and self-cooking teach students self-reliance and practical skills. Overcoming adventure challenges like trekking and rock climbing builds resilience and confidence, preparing them for life's obstacles."
+                head:'Provides Memorable Experiences',
+                desc:"Participating in the contest offers students memorable experiences, such as attending the International Space Development Conference (ISDC) in the United States. This opportunity allows students to interact with professionals in the space industry, attend workshops, and gain valuable insights into the field."
             },
             {
-                head:'Creativity and Social Responsibilty',
-                desc:'Creativity activities and CSR projects at student camps encourage thinking outside the box and engaging in community service, fostering social awareness and responsibility. These experiences cultivate empathy and a sense of purpose, motivating students to make positive contributions to society.'
+                head:'Offers Recognition and Scholarships',
+                desc:'The contest provides recognition for outstanding entries. The highest-ranking entry whose student(s) attend(s) ISDC will receive the $5,000 Herman Rubin Memorial Scholarship, and the top entries in the Artistic Merit and Literary Merit categories can receive a $500 scholarship.'
             },
             {
-                head:'Holistic and Personal Growth',
-                desc:'Leadership camps blend physical challenges with reflection, fostering personal growth. Psychometric analysis aids self-discovery, while immersive team-building activities enhance interpersonal skills, preparing students for future success.'
+                head:'Leads to Further Educational and Career Opportunities',
+                desc:'Winning entries are recognized internationally and often lead to further educational and career opportunities for students. Participation in the contest can open doors to internships, research projects, and even future employment in the space industry or related fields.'
             },
             
         ],
@@ -36,6 +36,7 @@ export const data = [
             }
         ]
     },
+    
     {
         route:'student-outbound',
         img:'/camps/outbound.png',

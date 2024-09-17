@@ -1,3 +1,5 @@
+export { Loader } from "./Loader";
+
 export { CaptainKhoj } from "./Khoj";
 
 export { About } from "./About";

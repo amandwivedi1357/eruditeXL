@@ -105,7 +105,7 @@ const Navbar = () => {
                                 className="absolute z-100 left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
                             >
                                 <div className="py-1 group-hover:block hover:block">
-                                    <NavLink to="/camps/leadership" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <NavLink to="/camps/space-settlement-contest" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                        Space Settlement Camp
                                     </NavLink>
                                     <NavLink to="/camps/student-outbound" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -186,7 +186,7 @@ const Navbar = () => {
     </NavLink>
     <Collapse in={isDropdownOpen} animateOpacity>
         <div className="ml-4">
-            <NavLink to="/camps/leadership" onClick={onClose} className="block px-4 py-2 text-sm">
+            <NavLink to="/camps/space-settlement-contest" onClick={onClose} className="block px-4 py-2 text-sm">
                 Space Settlement Camp
             </NavLink>
             <NavLink to="/camps/student-outbound" onClick={onClose} className="block px-4 py-2 text-sm">

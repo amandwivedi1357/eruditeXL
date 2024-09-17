@@ -1,4 +1,4 @@
-import  { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Button, Tab, TabList, TabPanel, TabPanels, Tabs, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from "@chakra-ui/react";
 import { Modal, ModalOverlay, ModalContent, ModalBody, IconButton } from "@chakra-ui/react";
 import { galleryTabs } from "../../utils/data";
@@ -6,11 +6,13 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Loader } from "../Loader";
 
 const GalleryPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentTab, setCurrentTab] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState({});
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -43,32 +45,53 @@ const GalleryPage = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
+  const handleImageLoad = useCallback((tabIndex, imageIndex) => {
+    setLoadedImages(prev => ({
+      ...prev,
+      [tabIndex]: {
+        ...prev[tabIndex],
+        [imageIndex]: true
+      }
+    }));
+  }, []);
+
+  const isTabFullyLoaded = useCallback((tabIndex) => {
+    const tabImages = loadedImages[tabIndex] || {};
+    return Object.keys(tabImages).length === galleryTabs[tabIndex].img.length;
+  }, [loadedImages]);
+
   const renderImage = useCallback(({ image, index, tabIndex }) => (
     <div
       key={index}
       className="p-2 relative cursor-pointer"
       onClick={() => openModal(tabIndex, index)}
     >
-     <LazyLoadImage
-  src={image}
-  alt={`Gallery image ${index + 1}`}
-  effect="blur"
-  className="w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
-  wrapperClassName="w-full h-full "
-/>
-
+      <LazyLoadImage
+        src={image}
+        alt={`Gallery image ${index + 1}`}
+        effect="blur"
+        className="w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+        wrapperClassName="w-full h-full"
+        onLoad={() => handleImageLoad(tabIndex, index)}
+      />
     </div>
-  ), [openModal]);
+  ), [openModal, handleImageLoad]);
 
   const memoizedTabPanels = useMemo(() => (
     galleryTabs.map((data, idx) => (
       <TabPanel key={idx}>
-        <div className="grid grid-cols-4 gap-4">
+        {!isTabFullyLoaded(idx) && (
+          <div className="w-full flex justify-center items-center">
+
+            <Loader />
+          </div>
+          )}
+        <div className="grid grid-cols-3 gap-4">
           {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex: idx }))}
         </div>
       </TabPanel>
     ))
-  ), [renderImage]);
+  ), [renderImage, isTabFullyLoaded]);
 
   const memoizedAccordion = useMemo(() => (
     <Accordion allowToggle>
@@ -83,6 +106,7 @@ const GalleryPage = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
+            {!isTabFullyLoaded(idx) && <Loader />}
             <div className="grid grid-cols-2 gap-4">
               {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex: idx }))}
             </div>
@@ -90,30 +114,30 @@ const GalleryPage = () => {
         </AccordionItem>
       ))}
     </Accordion>
-  ), [renderImage]);
+  ), [renderImage, isTabFullyLoaded]);
 
   return (
     <div className="w-full">
       <div className="w-[90%] mx-auto sm:w-[95%]">
-      <div className="my-5">
-        <p className="font-bold text-[40px] sm:text-[24px]">Gallery</p>
-      </div>
-      
-      {!isMobile ? (
-        <Tabs isFitted variant="enclosed">
-          <TabList mb="1em">
-            {galleryTabs.map((data, idx) => (
-              <Tab key={idx}>
-                <p>{data.head}</p>
-              </Tab>
-            ))}
-          </TabList>
-          <TabPanels>
-            {memoizedTabPanels}
-          </TabPanels>
-        </Tabs>
-      ) : memoizedAccordion}
-
+        <div className="my-5">
+          <p className="font-bold text-[40px] sm:text-[24px]">Gallery</p>
+        </div>
+        
+        {!isMobile ? (
+          <Tabs isFitted variant="enclosed">
+            <TabList mb="1em">
+              {galleryTabs.map((data, idx) => (
+                <Tab key={idx}>
+                  <p>{data.head}</p>
+                </Tab>
+              ))}
+            </TabList>
+            <TabPanels>
+              {memoizedTabPanels}
+            </TabPanels>
+          </Tabs>
+        ) : memoizedAccordion}
+        
       <Modal isOpen={isOpen} onClose={closeModal} size="full" isCentered>
         <ModalOverlay />
         <ModalContent className="bg-transparent shadow-none">

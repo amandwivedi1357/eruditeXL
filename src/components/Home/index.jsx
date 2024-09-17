@@ -146,7 +146,7 @@ const HomePage = () => {
                         </p>
                         <div className="self-start ml-9">
 
-                        <Button onClick={'camps/leadership'} text={'More'}/>
+                        <Button onClick={'camps/space-settlement-contest'} text={'More'}/>
                         </div>
                     </div>
                     <div className="w-full flex flex-col gap-5 flex-1 ">
