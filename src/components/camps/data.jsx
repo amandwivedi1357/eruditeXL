@@ -119,7 +119,7 @@ them in Creativity, Activity, and Service categories, fostering personal growth 
                 </>),
                 keyPoints:[
                     "Identify own strengths and develop areas for growth.",
-                    "Demonstrate that challenges have been undertaken, developing new skills in the process.",
+                    // "Demonstrate that challenges have been undertaken, developing new     skills in the process.",
                     "Demonstrate how to initiate and plan a CAS experience.",
                     "Show commitment to, and perseverance in, CAS experiences.",
                     "Demonstrate the skills and recognize the benefits of working collaboratively.",

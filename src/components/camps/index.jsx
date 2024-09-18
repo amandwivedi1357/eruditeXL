@@ -53,7 +53,7 @@ console.log(single)
     <div className='mt-[3rem]'>
 
     
-    <div className='mt-[40px]  flex sm:block sm:m-[20px]'>
+    <div className='mt-[40px]  flex sm:block '>
                 <div className="flex flex-col gap-[20px] flex-1 ">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
                       CAS Initiative 
@@ -64,14 +64,14 @@ console.log(single)
                 </div>
                
                 <div className="flex-1  flex flex-col gap-[20px]   sm:mt-7">
-                <p className='font-inter font-bold text-[30px] sm:text-[25px] ml-5'>
+                <p className='font-inter font-bold text-[30px] sm:text-[25px] ml-5 sm:ml-0'>
                        Some Key Points For CAS Initiatives:
                  </p>
-                <ul className='w-full flex flex-col gap-[20px] ml-5'>
+                <ul className='w-full flex flex-col gap-[20px] ml-5 sm:ml-0'>
 
                   {
                     camp.CAS.keyPoints.map((item,idx)=>(
-                      <li key={idx} className='flex items-center gap-[30px]'>
+                      <li key={idx} className='flex items-center gap-[30px] sm:gap-6'>
                       <Conc/>
                       <p className='font-inter text-[16px]'>{item}</p>
                     </li>
@@ -81,7 +81,7 @@ console.log(single)
                 </ul>
                 </div>
                </div>
-               <div className='w-full mb-[40px] mt-[5rem]'>
+               <div className='w-full mb-[40px] mt-[5rem] sm:mt-[2rem]'>
                 <p className='font-inter text-center text-[16px]'>{camp.CAS.conclusion}</p>
                </div>
                </div>
@@ -95,7 +95,7 @@ console.log(single)
 {camp.name} offers a valuable opportunity to develop essential life skills
 </p>
 
-<div className='mt-[40px] grid grid-cols-4 gap-5'>
+<div className='mt-[40px] grid grid-cols-4 sm:grid-cols-2 gap-5'>
 {
   camp.activities.map((item,idx)=>(
     <div className='flex flex-col gap-3' key={idx}>
