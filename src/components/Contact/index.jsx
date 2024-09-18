@@ -2,15 +2,15 @@
 const Contactus = () => {
   return (
     <div className="w-full">
-        <div className="w-full relative sm:h-[600px] sm:bg-[#01497B]">
+        <div className="w-full relative sm:h-[650px] sm:bg-[#01497B]">
             <img loading="lazy" src="/trips/contact.png" alt="" className="w-full h-[701px] sm:hidden"/>
 
-            <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[631px] sm:h-[570px] rounded-lg card absolute top-[5%] left-[5%]">
+            <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[631px] sm:h-[630px] rounded-lg card absolute top-[5%] left-[5%]">
                 <div className="m-[40px]">
                     <p className="text-white text-[30px] font-inter font-bold">
                         Contact us
                     </p>
-                    <p className="text-[16px] font-inter text-opacity-90 text-white w-[80%] mt-[20px]">
+                    <p className="text-[16px] font-inter text-opacity-90 text-white w-[80%] sm:w-full mt-[20px]">
                     Not sure what you need? The team at Eruditexl will be happy to listen to you.
                     </p>
                     <form action="" className="w-full mt-[30px] py-4">
