@@ -1,11 +1,10 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { Button, Tab, TabList, TabPanel, TabPanels, Tabs, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from "@chakra-ui/react";
+import { Button, Tab, TabList, TabPanel, TabPanels, Tabs, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Image } from "@chakra-ui/react";
 import { Modal, ModalOverlay, ModalContent, ModalBody, IconButton } from "@chakra-ui/react";
 import { galleryTabs } from "../../utils/data";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Loader } from "../Loader";
 
 const GalleryPage = () => {
@@ -69,9 +68,9 @@ const GalleryPage = () => {
       <LazyLoadImage
         src={image}
         alt={`Gallery image ${index + 1}`}
-        effect="blur"
+        // effect="blur"
         className="w-full h-auto transition-transform duration-500 ease-in-out transform hover:scale-110 hover:z-10"
-        wrapperClassName="w-full h-full"
+         wrapperClassName="w-full h-full"
         onLoad={() => handleImageLoad(tabIndex, index)}
       />
     </div>

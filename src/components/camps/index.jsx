@@ -2,6 +2,7 @@
 
 import { useParams } from 'react-router-dom';
 import { data } from './data';
+import Conc from '../../utils/conc';
 
 const SingleCamp = () => {
   const { single } = useParams();
@@ -49,6 +50,9 @@ console.log(single)
 
 {
   camp.CAS && (
+    <div className='mt-[3rem]'>
+
+    
     <div className='mt-[40px]  flex sm:block sm:m-[20px]'>
                 <div className="flex flex-col gap-[20px] flex-1 ">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
@@ -57,20 +61,34 @@ console.log(single)
                     <p className='font-inter text-[16px]'>
                    {camp.CAS.overview}
                     </p>
-                    <div className='flex flex-col gap-[20px]'>
-                    <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
-                       
-                    </p>
-                    </div>
                 </div>
                
-                <div className="flex-1 sm:mt-7">
-                    <img loading="lazy" src="/about/top.png" alt="" className='w-full'/>
+                <div className="flex-1  flex flex-col gap-[20px]   sm:mt-7">
+                <p className='font-inter font-bold text-[30px] sm:text-[25px] ml-5'>
+                       Some Key Points For CAS Initiatives:
+                 </p>
+                <ul className='w-full flex flex-col gap-[20px] ml-5'>
+
+                  {
+                    camp.CAS.keyPoints.map((item,idx)=>(
+                      <li key={idx} className='flex items-center gap-[30px]'>
+                      <Conc/>
+                      <p className='font-inter text-[16px]'>{item}</p>
+                    </li>
+                    ))
+                  }
+                 
+                </ul>
                 </div>
+               </div>
+               <div className='w-full mb-[40px] mt-[5rem]'>
+                <p className='font-inter text-center text-[16px]'>{camp.CAS.conclusion}</p>
+               </div>
                </div>
   )
 }
-
+{
+  camp.activities && (
 <div className='mt-[40px]'>
 <p className="text-inter text-[30px] font-bold text-center">Activities</p>
 <p className='text-inter text-center'>
@@ -89,6 +107,9 @@ console.log(single)
 }
 </div>
 </div>
+  )
+}
+
         
     </div>
    </div>

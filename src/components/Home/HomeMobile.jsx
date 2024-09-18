@@ -118,7 +118,7 @@ const HomeMobile = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
           >
-            <img loading="lazy" src={textAnimate[currentTextIndex].img} alt="" className="w-full" />
+            <img loading="lazy" src={textAnimate[currentTextIndex].img} alt="" className="w-[250px] mx-auto" />
             <div className="flex gap-4 items-center mt-6">
               <Conc />
               <p className="font-bold font-inter text-20px">{textAnimate[currentTextIndex].head}</p>

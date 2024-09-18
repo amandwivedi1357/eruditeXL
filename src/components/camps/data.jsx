@@ -28,13 +28,13 @@ export const data = [
             
         ],
        
-        activities:[
-            {
-                img:'',
-                head:'',
-                desc:''
-            }
-        ]
+        // activities:[
+        //     {
+        //         img:'',
+        //         head:'',
+        //         desc:''
+        //     }
+        // ]
     },
     
     {

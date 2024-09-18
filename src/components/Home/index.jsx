@@ -397,7 +397,7 @@ const HomePage = () => {
   <div className="flex gap-10   absolute top-12 left-[50%] transform -translate-x-1/2 space-x-8 md:flex-row items-center">
     {/* First Card */}
     <div className="flex gap-3 flex-col items-center">
-      <img loading="lazy" src="/Home/skygaze.png" alt="" className="w-[287px]" />
+      <img loading="lazy" src="/Home/sky.png" alt="" className="w-[247px]  h-[237px] mt-[-20px]" />
       <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
       <p className="text-[16px] font-inter text-center w-[80%]">With 25 years of rich experience in outbound experiential learning.</p>
     </div>

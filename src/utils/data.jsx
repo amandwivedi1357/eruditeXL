@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export const members = [
     
     {
@@ -123,17 +124,17 @@ export const images = [
 ]
 export const textAnimate = [
     {
-        img:'/mobile/hm1.png',
+        img:'/Home/inschool.svg',
         head:'In school camp',
         desc:'Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.'
     },
     {
-        img:'/mobile/hm2.png',
-        head:'Leadership camp',
+        img:'/Home/astro1.svg',
+        head:'Space Settlement camp',
         desc:'Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.'
     },
     {
-        img:'/mobile/hm3.png',
+        img:'/Home/outbound.svg',
         head:'Student outbound camp',
         desc:'Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.'
     },
@@ -174,27 +175,19 @@ Interaction with Locals, engaging with local artisans and residents helps studen
         </>)
     },
     {
-        head: 'Cultural Immersion',
+        head: 'Culture & Heritage',
         desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
-
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
+       Kashmir's unique cultural blend, encompassing diverse religions, languages, and cultures, showcases India's unity in diversity. Srinagar, as a part of this region, reflects this blend through its historical and religious sites.
+       <br />
+       <br />
+        The region's rich cultural heritage, from Sanskrit and Persian learning centers to Islamic influences, exemplifies the harmonious coexistence of different traditions.
         </>)
     },
     {
-        head: 'Regional Immersion',
+        head: 'Kashmir Folk Music Chakri',
         desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
-
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
-        </>)
-    },
-    {
-        head: 'National Immersion',
-        desc:(<>
-        Understanding Local Traditions, living on a houseboat and visiting local crafts units provide firsthand insight into Kashmiri culture and traditions. <br /><br />
-
-Interaction with Locals, engaging with local artisans and residents helps students understand the daily life, challenges, and customs of the people in Kashmir.
+       It is most popular form of Kashmiri folk music. It has some resemblance with chakra of mountaineous regions of Uttar Pradesh. <br /> <br />
+        Normally Garaha, Sarangi, Rabab were the musical instruments used in the past. But now thw harmonium too has made its way in its presentation.
         </>)
     },
 ]
