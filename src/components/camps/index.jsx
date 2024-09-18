@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+
 import { useParams } from 'react-router-dom';
 import { data } from './data';
 
@@ -46,6 +46,31 @@ console.log(single)
         </div>
   )
 }
+
+{
+  camp.CAS && (
+    <div className='mt-[40px]  flex sm:block sm:m-[20px]'>
+                <div className="flex flex-col gap-[20px] flex-1 ">
+                    <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
+                      CAS Initiative 
+                    </p>
+                    <p className='font-inter text-[16px]'>
+                   {camp.CAS.overview}
+                    </p>
+                    <div className='flex flex-col gap-[20px]'>
+                    <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
+                       
+                    </p>
+                    </div>
+                </div>
+               
+                <div className="flex-1 sm:mt-7">
+                    <img loading="lazy" src="/about/top.png" alt="" className='w-full'/>
+                </div>
+               </div>
+  )
+}
+
 <div className='mt-[40px]'>
 <p className="text-inter text-[30px] font-bold text-center">Activities</p>
 <p className='text-inter text-center'>

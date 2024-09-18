@@ -118,7 +118,7 @@ const HomePage = () => {
             </div>
         </div>
         
-        <div className="w-full mt-[50px]">
+        <div className="w-full mt-[50px] ">
             <div className="mx-[40px] sm:mx-[20px] flex justify-between sm:flex-col">
                 <div className="w-[35%] flex flex-col gap-[25px] sm:w-full ">
                     <p className="text-black text-[40px] font-bold font-inter sm:text-[25px] ">
@@ -128,13 +128,24 @@ const HomePage = () => {
                     Our camps offer hands on learning experiences in settings where campers can connect with nature acquire life skills and forge lifelong friendships.
                     </p>
                    
-                    <div className=" self-start">
+                    <div className=" mx-[40px] items-center flex flex-col  gap-10">
+                <img loading="lazy" src="/Home/inschool.svg" alt="" className="w-[250px]"/>
+                <div className="flex flex-col gap-3">
 
-                    {/* <Button  text={'Explore Now'}/> */}
+                    <div className="flex gap-5 items-center">
+                        <Conc/>
+                        <p className="font-bold font-inter text-20px">In school camp</p>
                     </div>
+                    <p className="w-[85%] mr-2 ml-9">Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.</p>
+                    <div className="self-start ml-9">
+
+                        <Button onClick={'camps/inschool'} text={'More'}/>
+                        </div>
+                </div>
+            </div>
                     
                 </div>
-                <div className="w-[60%]  flex  sm:w-full">
+                <div className="w-[60%]  flex  sm:w-full ">
                     <div className="w-full flex flex-col gap-3 flex-1 ">
                         <img loading="lazy" src="/Home/astro1.svg" alt="" className="w-[60%] mx-auto"/>
                         <div className="flex gap-4 items-center">
@@ -149,7 +160,7 @@ const HomePage = () => {
                         <Button onClick={'camps/space-settlement-contest'} text={'More'}/>
                         </div>
                     </div>
-                    <div className="w-full flex flex-col gap-5 flex-1 ">
+                    <div className="w-full flex flex-col gap-5 flex-1 mt-[120px]">
                         <div className="flex gap-4 items-center">
                             <Conc/>
                         <p className="font-bold font-inter text-20px">Student outbound camp</p>
@@ -165,21 +176,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-[30%] mt-[-180px] mx-[40px] items-center flex flex-col  gap-10">
-                <img loading="lazy" src="/Home/inschool.svg" alt="" className="w-[250px]"/>
-                <div className="flex flex-col gap-3">
-
-                    <div className="flex gap-5 items-center">
-                        <Conc/>
-                        <p className="font-bold font-inter text-20px">In school camp</p>
-                    </div>
-                    <p className="w-[85%] mr-2 ml-9">Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.</p>
-                    <div className="self-start ml-9">
-
-                        <Button onClick={'camps/inschool'} text={'More'}/>
-                        </div>
-                </div>
-            </div>
+            
         </div>
 
 
@@ -237,7 +234,7 @@ const HomePage = () => {
             <div className="w-full relative">
             <img loading="lazy" src="/Home/kashmir.png" alt="" className="w-full" />
 
-            <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[15%] left-[8%]">
+            <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[25%] left-[8%]">
                 <div className="mx-[36px] my-[25px]">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -279,7 +276,7 @@ const HomePage = () => {
 
             </div>
             <div className="h-[1000px] relative">
-                <div className="absolute w-[351px] top-[30%] left-[10%] flex flex-col gap-4 ">
+                <div className="absolute w-[351px] top-[30%] left-[5%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -295,7 +292,7 @@ const HomePage = () => {
                     </div>
                        
                 </div>
-                <div className="absolute w-[351px] top-[10%] left-[25%] flex flex-col gap-4 ">
+                <div className="absolute w-[351px] top-[10%] left-[20%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -340,7 +337,7 @@ const HomePage = () => {
                     </div>
                        
                 </div>
-                <div className="absolute z-100 w-[351px] top-[40%] right-[1%] flex flex-col gap-4 ">
+                <div className="absolute z-100 w-[351px] top-[35%] right-[1%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -350,7 +347,7 @@ const HomePage = () => {
                         </p>
                             </div>
                         
-                        <p className="w-[85%] ml-9">
+                        <p className="w-[85%] ml-9 z-10">
                         High focus on both the physical and psychological safety of participants.                        </p>
                     </div>
                        

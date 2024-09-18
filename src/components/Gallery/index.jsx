@@ -63,14 +63,14 @@ const GalleryPage = () => {
   const renderImage = useCallback(({ image, index, tabIndex }) => (
     <div
       key={index}
-      className="p-2 relative cursor-pointer"
+      className="p-2 relative cursor-pointer overflow-hidden"
       onClick={() => openModal(tabIndex, index)}
     >
       <LazyLoadImage
         src={image}
         alt={`Gallery image ${index + 1}`}
         effect="blur"
-        className="w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+        className="w-full h-auto transition-transform duration-500 ease-in-out transform hover:scale-110 hover:z-10"
         wrapperClassName="w-full h-full"
         onLoad={() => handleImageLoad(tabIndex, index)}
       />

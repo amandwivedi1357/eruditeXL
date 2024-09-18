@@ -60,7 +60,7 @@ const About = () => {
                 </div>
                </div>
                <div className="h-[1000px] relative sm:hidden">
-                <div className="absolute w-[351px] top-[30%] left-[10%] flex flex-col gap-4 ">
+                <div className="absolute w-[351px] top-[30%] left-[5%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -76,7 +76,7 @@ const About = () => {
                     </div>
                        
                 </div>
-                <div className="absolute w-[351px] top-[10%] left-[25%] flex flex-col gap-4 ">
+                <div className="absolute w-[351px] top-[10%] left-[20%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">

@@ -6,54 +6,19 @@ export const members = [
         post:'Chief Facilitator'
     },
     {
-        name:'P.Vishnu',
+        name:'Shirish Sahasrabudhe',
         img:'',
-        post:'Chief Facilitator'
+        post:'Level 1 Professional Inspector'
     },
     {
-        name:'P.Vishnu',
+        name:'Ashok Kalamkar',
         img:'',
-        post:'Chief Facilitator'
+        post:'Proprietor'
     },
     {
-        name:'P.Vishnu',
+        name:'Shantanu Pandit',
         img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
-    },
-    {
-        name:'P.Vishnu',
-        img:'',
-        post:'Chief Facilitator'
+        post:'Facilitator and Consultant'
     },
 ]
 

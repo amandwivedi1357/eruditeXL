@@ -1,7 +1,7 @@
 export const data = [
     {
         route:'space-settlement-contest',
-        img:'/khoj/ssc.webp',
+        img:'/camps/ssc1.jpg',
         name:'Space Settlement Contest',
         overview:'The NSS/NASA Space Settlement Contest is an annual competition that challenges students in grades 6-12 to design habitable space settlements. The contest encourages the application of multiple disciplines, including science, engineering, technology, and the arts. Winning entries are recognized internationally and often lead to further educational and career opportunities.',
         benefit:[
@@ -104,26 +104,47 @@ export const data = [
             },
             
         ],
+        CAS:
+            {
+                overview:(<>
+                Erudite Initiatives, founded in 1998, disrupts traditional educational travel by pioneering a
+comprehensive methodology. Our holistic approach intertwines experiential learning with
+sustainability ethics, enriching students&#39; character development. <br /> <br />
+In Program Development, we delve into issues at our destinations, establishing partnerships
+with local grassroots organizations. This collaboration births Erudite CAS activities that mutually
+benefit all involved parties. <br /> <br />
+Activities at Erudite Initiatives are meticulously designed, drawing inspiration from the
+International Baccalaureate framework. They immerse students in local cultures and challenge
+them in Creativity, Activity, and Service categories, fostering personal growth and discovery.
+                </>),
+                keyPoints:[
+                    "Identify own strengths and develop areas for growth.",
+                    "Demonstrate that challenges have been undertaken, developing new skills in the process.",
+                    "Demonstrate how to initiate and plan a CAS experience.",
+                    "Show commitment to, and perseverance in, CAS experiences.",
+                    "Demonstrate the skills and recognize the benefits of working collaboratively.",
+                    "Demonstrate engagement with issues of global significance.",
+                    "Recognize and consider the ethics of choices and actions.",
+                ],
+                conclusion:'Lastly, our commitment to Ethical Service ensures that all CAS programs prioritize genuine needs while upholding the rights and autonomy of participants. By fostering a culture of respect and community engagement, we aim to leave a lasting positive impact wherever we go.'
+            },
+       
         activities:[
             {
                 img:'/camps/act1.png',
                 head:'Knot Practice',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act2.png',
                 head:'Blind Trekking',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act3.png',
                 head:'Zipline',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act4.png',
                 head:'Tent Pitching',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
         ]
     },
@@ -172,22 +193,18 @@ export const data = [
             {
                 img:'/camps/act1.png',
                 head:'Knot Practice',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act2.png',
                 head:'Blind Trekking',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act3.png',
                 head:'Zipline',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
             {
                 img:'/camps/act4.png',
                 head:'Tent Pitching',
-                desc:'Lorem ipsum dolor sit amet consectetur. Amet ligula id enim cras hac.'
             },
         ]
     },
