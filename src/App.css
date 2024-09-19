@@ -49,3 +49,71 @@
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
+.whatsapp-icon-container {
+    position: fixed;
+    bottom: 50%;
+    right: -1%;
+    z-index: 1000;
+  }
+  
+  .whatsapp-icon {
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .whatsapp-info {
+    position: absolute;
+    top: 0;
+    right: -100%; /* Initially position outside the container */
+    display: flex;
+    width: 200px; 
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, right 0.3s ease; /* Added right transition */
+  }
+  
+  .whatsapp-info-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .whatsapp-info-text {
+    font-size: 14px;
+    margin: auto;
+    color: #fff;
+  }
+  .inner_left{
+    margin-top: 10px;
+    width: 25%; /* Adjust the width as needed */
+  
+    max-height: 100vh; /* Set the maximum height to 100% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+    border-radius: 5px;
+  /* border: 2px solid red; */
+  }
+  .whatsapp-icon-container:hover .whatsapp-info {
+    opacity: 1;
+    visibility: visible;
+    right: 0; /* Slide in from the right */
+  }
+  .whatsapp-icon-container:hover .whatsapp-icon {
+    opacity: 0; /* Hide the original WhatsApp icon */
+  }
+  @media (max-width: 768px)  {
+    .whatsapp-icon{
+      bottom: 2rem;
+    }
+    .whatsapp-icon-container{
+      bottom: 2rem;
+    }
+    .inner_left{
+      width: 100%;
+      max-height: 100%;
+    }
+  }
