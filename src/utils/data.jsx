@@ -257,3 +257,63 @@ export const eruditeXl = [
     },
 
 ]
+
+
+export const schoolLogos = [
+    {
+        name: 'Aga Khan Academy',
+        src: 'school_logos/aka.png'
+    },
+    {
+        name: 'Akal Academy',
+        src: 'school_logos/akal.png'
+    },
+    {
+        name: 'The Cathedral',
+        src: 'school_logos/cathedral.png'
+    },
+    {
+        name: 'Chirec International School',
+        src: 'school_logos/chirec.png'
+    },
+    {
+        name: 'DPS Secunderabad',
+        src: 'school_logos/dps.png'
+    },
+    {
+        name: 'DPS Warangal',
+        src: 'school_logos/dpsw.png'
+    },
+    {
+        name: 'Gems Modern Academy',
+        src: 'school_logos/gems.png'
+    },
+    {
+        name: 'Glendale Academy',
+        src: 'school_logos/glendale.png'
+    },
+    {
+        name: 'Indus International School',
+        src: 'school_logos/indus.png'
+    },
+    {
+        name: 'Meridian School',
+        src: 'school_logos/meridian.png'
+    },
+    {
+        name: 'Meru International School',
+        src: 'school_logos/meru.png'
+    },
+    {
+        name: 'Oakridge International School',
+        src: 'school_logos/oak.png'
+    },
+    {
+        name: 'Paramita School',
+        src: 'school_logos/paramita.png'
+    },
+    {
+        name: 'Unicent International School',
+        src: 'school_logos/unicent.png'
+    }
+];

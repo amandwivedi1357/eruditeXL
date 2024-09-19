@@ -5,6 +5,7 @@ import HeroButton, { Dots } from "."
 import { AnimatePresence, motion } from "framer-motion";
 import Conc from "../../utils/conc";
 import { btns, eruditeXl, images, textAnimate, textAnimate2 } from "../../utils/data";
+import { Schools } from "../schools";
 
 const setting = {
   initial: { opacity: 0, y: 100 },
@@ -233,6 +234,7 @@ const HomeMobile = () => {
                     {/* button */}
                 </div> 
     </div>
+    <Schools/>
 </div>
   );
 };

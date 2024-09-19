@@ -8,6 +8,7 @@ import { motion,AnimatePresence } from "framer-motion"
 import "./style.css"
 import HomeMobile from "./HomeMobile.jsx"
 import { btns } from "../../utils/data.jsx"
+import { Schools } from "../schools/index.jsx"
 // import { Fade } from "@chakra-ui/react"
 
 
@@ -431,7 +432,9 @@ const HomePage = () => {
                 </div>
             </div>
         </div>
-
+        <div className=" w-full">
+        <Schools/>
+        </div>
 
  </div>
  <div className="hidden sm:block w-full">
