@@ -21,6 +21,46 @@ export const members = [
         img:'',
         post:'Facilitator and Consultant'
     },
+    {
+        name:'P. Rajeshwer',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Mohan Pyare',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Ganesh Acharya',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'S. Gangadhar',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Msyed Mustafa',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Dr. K. R . Raghavan',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Dr. K. R . Raghavan',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
+    {
+        name:'Ms. Vanaja Siriperendupuru',
+        img:'',
+        post:'Facilitator and Consultant'
+    },
 ]
 
 export const galleryTabs = [
@@ -204,16 +244,12 @@ export const eruditeXl = [
     },
     
     {
-        title:'Certified educators',
-        description:'Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes..'
-    },
-    {
         title:'Reflective learning',
-        description:'With 25 years of rich experience in outbound experiential learning.'
+        description:'A focus on reflective learning helps participants absorb, understand, and apply lessons from each experience.'
     },
     {
         title:'Top quality equipments',
-        description:'With 25 years of rich experience in outbound experiential learning.'
+        description:'Equipped with the highest quality gear, enhancing the safety and effectiveness of outdoor experiential learning. '
     },
     {
         title:'Safety First',

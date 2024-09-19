@@ -101,7 +101,7 @@ const About = () => {
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.                        </p>
+                        A focus on reflective learning helps participants absorb, understand, and apply lessons from each experience.                          </p>
                     </div>
                        
                 </div>
@@ -116,7 +116,7 @@ const About = () => {
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.                        </p>
+                        Equipped with the highest quality gear, enhancing the safety and effectiveness of outdoor experiential learning.                       </p>
                     </div>
                        
                 </div>
@@ -219,7 +219,7 @@ const About = () => {
             <div className='w-full grid grid-cols-4 mt-[40px]'>
                 {
                     members.map((item,idx)=>(
-                        <div className='flex flex-col gap-[15px] mx-auto' key={idx}>
+                        <div className='flex  flex-col gap-[15px] ' key={idx}>
                             <img loading="lazy" src={item.img} alt="" />
                             <p className="font-bold font-inter">{item.name}</p>
                             <p className="font-inter">{item.post}</p>

@@ -136,7 +136,7 @@ const HomePage = () => {
                         <Conc/>
                         <p className="font-bold font-inter text-20px">In school camp</p>
                     </div>
-                    <p className="w-[85%] mr-2 ml-9">Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.</p>
+                    <p className="w-[85%] mr-2 ml-9">An in-campus outdoor learning overnight adventure camp provides students with a safe, enriching experience that fosters life skills, creativity, physical activity, and social connections.</p>
                     <div className="self-start ml-9">
 
                         <Button onClick={'camps/inschool'} text={'More'}/>
@@ -153,7 +153,7 @@ const HomePage = () => {
                         <p className="font-bold font-inter text-20px">Space Settlement camp</p>
                         </div>
                         <p className="w-[85%] mr-2 ml-9">
-                        Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.  
+                        The NSS/NASA Space Settlement Contest invites students in grades 6-12 to design space habitats, fostering interdisciplinary learning and offering international recognition and future opportunities.  
                         </p>
                         <div className="self-start ml-9">
 
@@ -166,7 +166,7 @@ const HomePage = () => {
                         <p className="font-bold font-inter text-20px">Student outbound camp</p>
                         </div>
                         <p className="w-[85%] mr-2 ml-9">
-                        Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.
+                        A student outbound adventure camp provides experiential learning through outdoor activities, promoting personal growth, leadership, confidence, resilience, and teamwork in an adventurous setting.
                         </p>
                         <div className="self-start ml-9">
 
@@ -318,7 +318,7 @@ const HomePage = () => {
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.                        </p>
+                        A focus on reflective learning helps participants absorb, understand, and apply lessons from each experience.                       </p>
                     </div>
                        
                 </div>
@@ -333,7 +333,7 @@ const HomePage = () => {
                             </div>
                         
                         <p className="w-[85%] ml-9">
-                        With 25 years of rich experience in outbound experiential learning.                        </p>
+                        Equipped with the highest quality gear, enhancing the safety and effectiveness of outdoor experiential learning.                    </p>
                     </div>
                        
                 </div>
