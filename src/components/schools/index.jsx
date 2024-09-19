@@ -5,7 +5,7 @@ import { schoolLogos } from '../../utils/data';
 const Schools = () => {
   return (
     <MarqueeContainer>
-      <p className='text-center font-bold sm:ml-[20px] text-[40px] text-black sm:text-[24px] sm:text-left'>
+      <p className='text-center font-bold sm:ml-[20px] mb-10 text-[40px] text-black sm:text-[24px] sm:text-left'>
         The Reputable Institutions We Engage With
       </p>
       <Marquee

@@ -379,6 +379,14 @@ const HomePage = () => {
 
             </div>
         </div>
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+         transition={{ duration: 0.5 }}
+        className=" w-full py-10">
+        <Schools/>
+        </motion.div>
         <div className="w-full">
         <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -392,6 +400,8 @@ const HomePage = () => {
                 </p>
 
             </motion.div>
+
+           
             <div className="w-full relative">
   <img loading="lazy" src="/Home/mount.png" alt="" className="w-full" />
 
@@ -432,9 +442,7 @@ const HomePage = () => {
                 </div>
             </div>
         </div>
-        <div className=" w-full">
-        <Schools/>
-        </div>
+        
 
  </div>
  <div className="hidden sm:block w-full">

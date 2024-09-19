@@ -204,10 +204,18 @@ const HomeMobile = () => {
             <img loading="lazy" src="/mobile/hm7.png" className="w-full" alt="" />
             </div>
             {/* slider */}
-
+            <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+         transition={{ duration: 0.5 }}
+        className=" w-full py-10">
+        <Schools/>
+        </motion.div>
             <div className="w-full mt-3">
   {/* <img loading="lazy" src="/Home/mount.png" alt="" className="w-full" /> */}
 
+            <p className="text-[24px] m-[20px] font-bold">Upcoming Events</p>
   <div className="flex gap-10 items-center w-[90%]  mx-auto mb-6">
     {/* First Card */}
     <div className="flex gap-3 flex-col items-center sm:items-start">
@@ -234,7 +242,7 @@ const HomeMobile = () => {
                     {/* button */}
                 </div> 
     </div>
-    <Schools/>
+    
 </div>
   );
 };
