@@ -36,12 +36,12 @@ const About = () => {
 
                 </div>
                 <div className="flex-1 sm:mt-7">
-                    <img loading="lazy" src="/about/top.png" alt="" className='w-full'/>
+                    <img loading="lazy" src="/about/top.webp" alt="" className='w-full'/>
                 </div>
                </div>
                <div className='my-[40px]  flex sm:block '>
                 <div className="flex-1 ">
-                    <img loading="lazy" src="/about/vision.png" alt="" className='w-full'/>
+                    <img loading="lazy" src="/about/vision.webp" alt="" className='w-full'/>
                 </div>
                 <div className="flex justify-center flex-col gap-[20px] flex-1 sm:mx-[20px]">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px] sm:mt-5'>
@@ -210,7 +210,7 @@ const About = () => {
 
             
             </div>
-                <img loading="lazy" src="/about/mob_mount.png" alt="" className='w-full mt-20 hidden sm:block'/>
+                <img loading="lazy" src="/about/mob_mount.webp" alt="" className='w-full mt-20 hidden sm:block'/>
 
             <div className="m-[40px] sm:hidden">
             <p className="text-center text-[30px] font-inter font-bold">

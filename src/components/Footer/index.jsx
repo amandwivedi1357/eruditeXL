@@ -17,12 +17,12 @@ const Footer = () => {
             <div className='w-[20%] ml-[50px] flex flex-col gap-3 sm:w-full sm:ml-0  sm:mt-8'>
                 <p className='font-semibold font-inter text-white'>Quick Links</p>
                 <ul>
-                    <li onClick={()=>navigate('/')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Home</li>
-                    <li onClick={()=>navigate('/about-us')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>About us</li>
+                    <li onClick={()=>navigate('/')} className='text-white mb-2 cursor-pointer hover:text-[#DE8500] duration-200 ease-in-out'>Home</li>
+                    <li onClick={()=>navigate('/about-us')} className='text-white mb-2 cursor-pointer hover:text-[#DE8500] duration-200 ease-in-out'>About us</li>
                     {/* <li onClick={()=>navigate('/')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Camps</li> */}
-                    <li onClick={()=>navigate('/national-trips')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>National Trips</li>
-                    <li onClick={()=>navigate('/gallery')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Gallery</li>
-                    <li onClick={()=>navigate('/contact-us')} className='text-white mb-2 cursor-pointer hover:text-[#dfdddd] duration-200 ease-in-out'>Contact us</li>
+                    <li onClick={()=>navigate('/national-trips')} className='text-white mb-2 cursor-pointer hover:text-[#DE8500] duration-200 ease-in-out'>National Trips</li>
+                    <li onClick={()=>navigate('/gallery')} className='text-white mb-2 cursor-pointer hover:text-[#DE8500] duration-200 ease-in-out'>Gallery</li>
+                    <li onClick={()=>navigate('/contact-us')} className='text-white mb-2 cursor-pointer hover:text-[#DE8500] duration-200 ease-in-out'>Contact us</li>
                 </ul>
             </div>
             <div className=' flex flex-col gap-3  sm:mt-6'>
@@ -48,22 +48,22 @@ const Footer = () => {
                 <p className='font-semibold font-inter text-white'>Social Media</p>
                 <div className='flex gap-4'>
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
-                        <FaInstagram color='#fff'/>
+                        <FaInstagram color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
-                        <FaFacebook color='#fff'/>
+                        <FaFacebook color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
-                        <LuTwitter color='#fff'/>
+                        <LuTwitter color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
-                        <FaLinkedinIn color='#fff'/>
+                        <FaLinkedinIn color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
                 </div>
             </div>
         </div>
         <div className='sm:mt-[-40px]'>
-            <p className='text-white font-inter text-center py-[40px]'>All © rights are reserved by Eruditexl.com | Developed By Rayformula</p>
+            <p className='text-white font-inter text-center py-[40px]'>All © rights are reserved by Eruditexl.com | <span className='nav-link cursor-pointer' onClick={()=>window.open("https://rayformula.com/","_blank")}> Developed By Rayformula</span></p>
         </div>
     </div>
   )

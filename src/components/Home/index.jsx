@@ -121,7 +121,12 @@ const HomePage = () => {
         
         <div className="w-full mt-[50px] ">
             <div className="mx-[40px] sm:mx-[20px] flex justify-between sm:flex-col">
-                <div className="w-[35%] flex flex-col gap-[25px] sm:w-full ">
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.5 }}
+                className="w-[35%] flex flex-col gap-[25px] sm:w-full ">
                     <p className="text-black text-[40px] font-bold font-inter sm:text-[25px] ">
                     Your Ultimate Camping Adventure Awaits
                     </p>
@@ -133,10 +138,15 @@ const HomePage = () => {
                 <img loading="lazy" src="/Home/inschool.svg" alt="" className="w-[250px]"/>
                 <div className="flex flex-col gap-3">
 
-                    <div className="flex gap-5 items-center">
+                    <motion.div
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     viewport={{ once: true }}
+                     transition={{ duration: 0.5 }}
+                    className="flex gap-5 items-center">
                         <Conc/>
                         <p className="font-bold font-inter text-20px">In school camp</p>
-                    </div>
+                    </motion.div>
                     <p className="w-[85%] mr-2 ml-9">An in-campus outdoor learning overnight adventure camp provides students with a safe, enriching experience that fosters life skills, creativity, physical activity, and social connections.</p>
                     <div className="self-start ml-9">
 
@@ -145,8 +155,13 @@ const HomePage = () => {
                 </div>
             </div>
                     
-                </div>
-                <div className="w-[60%]  flex  sm:w-full ">
+                </motion.div>
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.5 }}
+                className="w-[60%]  flex  sm:w-full ">
                     <div className="w-full flex flex-col gap-3 flex-1 ">
                         <img loading="lazy" src="/Home/astro1.svg" alt="" className="w-[60%] mx-auto"/>
                         <div className="flex gap-4 items-center">
@@ -175,7 +190,7 @@ const HomePage = () => {
                         </div>
                         <img loading="lazy" src="/Home/outbound.svg" alt="" className="w-[60%] mx-auto"/>
                     </div>
-                </div>
+                </motion.div>
             </div>
             
         </div>
@@ -188,7 +203,7 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="w-full flex ">
             <div className="w-[60%] ">
-                <img src="/Home/mukteshwar.png" alt="" />
+                <img src="/Home/mukteshwar.webp" alt="" />
             </div>
             <div className="w-[40%] ">
                 <div className="m-[50px] flex flex-col gap-5 ">
@@ -233,7 +248,7 @@ const HomePage = () => {
                 </p>
             </div>
             <div className="w-full relative">
-            <img loading="lazy" src="/Home/kashmir.png" alt="" className="w-full" />
+            <img loading="lazy" src="/Home/kashmir.webp" alt="" className="w-full" />
 
             <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[25%] left-[8%]">
                 <div className="mx-[36px] my-[25px]">
@@ -277,7 +292,12 @@ const HomePage = () => {
 
             </div>
             <div className="h-[1000px] relative">
-                <div className="absolute w-[351px] top-[30%] left-[5%] flex flex-col gap-4 ">
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+                className="absolute w-[351px] top-[30%] left-[5%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -292,8 +312,13 @@ const HomePage = () => {
                         </p>
                     </div>
                        
-                </div>
-                <div className="absolute w-[351px] top-[10%] left-[20%] flex flex-col gap-4 ">
+                </motion.div>
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+                className="absolute w-[351px] top-[10%] left-[20%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -307,8 +332,13 @@ const HomePage = () => {
                         Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.                        </p>
                     </div>
                        
-                </div>
-                <div className="absolute w-[351px] top-[25%] left-[45%] flex flex-col z-100 gap-4 ">
+                </motion.div>
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+                className="absolute w-[351px] top-[25%] left-[45%] flex flex-col z-100 gap-4 ">
                     <div className="w-full flex flex-col gap-2 ">
 
                             <div className="flex gap-4 items-center">
@@ -322,8 +352,13 @@ const HomePage = () => {
                         A focus on reflective learning helps participants absorb, understand, and apply lessons from each experience.                       </p>
                     </div>
                        
-                </div>
-                <div className="absolute w-[351px] top-[10%] left-[70%] flex flex-col gap-4 ">
+                </motion.div>
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+                className="absolute w-[351px] top-[10%] left-[70%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -337,8 +372,13 @@ const HomePage = () => {
                         Equipped with the highest quality gear, enhancing the safety and effectiveness of outdoor experiential learning.                    </p>
                     </div>
                        
-                </div>
-                <div className="absolute z-100 w-[351px] top-[35%] right-[1%] flex flex-col gap-4 ">
+                </motion.div>
+                <motion.div
+                 initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+                className="absolute z-100 w-[351px] top-[35%] right-[1%] flex flex-col gap-4 ">
                     <div className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
@@ -352,7 +392,7 @@ const HomePage = () => {
                         High focus on both the physical and psychological safety of participants.                        </p>
                     </div>
                        
-                </div>
+                </motion.div>
 
             <img loading="lazy" src="/Home/erudite.png" alt="" className="absolute bottom-0 w-full"/>
             </div>
@@ -425,7 +465,7 @@ const HomePage = () => {
         </div>
         <div className="w-full bg-[#E9F9FE] flex mt-[100px]">
             <div className="flex-1">
-            <img loading="lazy" src="/camps/tailored.png" alt="" className="w-full"/>
+            <img loading="lazy" src="/camps/tailored.webp" alt="" className="w-full"/>
             </div>
             <div className="flex-1 flex  items-center">
                 <div className="ml-[64px]">
