@@ -47,18 +47,19 @@ const Footer = () => {
             <div className=' flex flex-col gap-3 ml-[50px] sm:ml-0 sm:mt-8'>
                 <p className='font-semibold font-inter text-white'>Social Media</p>
                 <div className='flex gap-4'>
-                    <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
-                        <FaInstagram color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
-                    </div>
-                    <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
+                <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
                         <FaFacebook color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
+                    {/* <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
+                        <FaInstagram color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
+                    </div>
+                    
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
                         <LuTwitter color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
                     </div>
                     <div className='w-10 h-10 hover:bg-[#000] cursor-pointer bg-[#DE8500] rounded-full flex items-center justify-center'>
                         <FaLinkedinIn color='#fff' onClick={()=>window.open('https://www.facebook.com/eruditexpl','_blank')}/>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
