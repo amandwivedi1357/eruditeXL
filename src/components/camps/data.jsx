@@ -150,7 +150,7 @@ them in Creativity, Activity, and Service categories, fostering personal growth 
     },
     {
         route:'inschool',
-        img:'/camps/school.png',
+        img:'/inschool/inschool.png',
         name:'Inschool Camp',
         overview:'Participating in an in-campus outdoor learning overnight adventure camp, especially when organized on familiar grounds like the school campus football field, offers a unique blend of safety, accessibility, and educational enrichment. Here are several compelling reasons to join such a camp. An in-campus outdoor learning overnight adventure camp offers students a valuable opportunity to develop essential life skills, participate in physical and creative activities, and strengthen social bonds. This experience takes place in the safe and convenient environment of the school, providing a memorable and enriching balance of fun, education, and personal growth.',
         benefit:[
