@@ -39,7 +39,7 @@ export const data = [
     
     {
         route:'student-outbound',
-        img:'/camps/outbound.png',
+        img:'/camps/outbound.webp',
         name:'Student Outbound Camp',
         overview:'A student outbound adventure camp offers experiential learning through outdoor activities like trekking, camping, and team-building exercises. Designed to foster personal growth and leadership skills, these camps encourage self-confidence, resilience, and teamwork in a natural and adventurous environment.',
         benefit:[
