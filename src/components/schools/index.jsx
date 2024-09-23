@@ -1,10 +1,23 @@
 import Marquee from 'react-fast-marquee';
 import styled from 'styled-components';
-import { schoolLogos } from '../../utils/data';
+import { fadeIn, schoolLogos, slideIn } from '../../utils/data';
+import { motion } from 'framer-motion';
 
 const Schools = () => {
+  
   return (
-    <MarqueeContainer>
+    <motion.div
+    variants={fadeIn}
+    whileInView={'visible'}
+    initial='hidden'
+    >
+
+    
+    <MarqueeContainer
+    initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+    >
       <p className='text-center font-bold sm:ml-[20px] mb-10 text-[40px] text-black sm:text-[24px] sm:text-left'>
         The Reputable Institutions We Engage With
       </p>
@@ -24,6 +37,7 @@ const Schools = () => {
         ))}
       </Marquee>
     </MarqueeContainer>
+    </motion.div>
   );
 };
 

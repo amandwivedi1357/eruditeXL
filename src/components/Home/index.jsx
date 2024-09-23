@@ -7,7 +7,7 @@ import { Button } from "../Button/index.jsx"
 import { motion,AnimatePresence } from "framer-motion"
 import "./style.css"
 import HomeMobile from "./HomeMobile.jsx"
-import { btns } from "../../utils/data.jsx"
+import { btns, fadeIn, slideIn, slideInRight } from "../../utils/data.jsx"
 import { Schools } from "../schools/index.jsx"
 // import { Fade } from "@chakra-ui/react"
 
@@ -101,13 +101,21 @@ const HomePage = () => {
 
        
         <div className='w-full h-[80vh]  bg-[#01497B] flex '>
-            <div className=" flex justify-center items-center w-[40%]">
+            <motion.div
+            initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+            className=" flex justify-center items-center w-[40%]">
                 <div className="flex gap-[20px] flex-col  w-[78%] ">
                     <p className="font-inter leading-[55px] text-white font-bold text-[45px]">We Embark On Adventures, With Purpose</p>
                     <p className="font-inter leading-7 text-[#ffffffE6] ">At Eruditexl we firmly believe that the world is a classroom waiting to be explored.</p>
                 </div>
-            </div>
-            <div className=" w-[60%] relative">
+            </motion.div>
+            <motion.div
+            initial="hidden"
+            variants={slideInRight}
+            whileInView={'visible'}
+            className=" w-[60%] relative">
                 <img loading="lazy" className="z-10 absolute top-[40%]" src="/Home/ils1.png" alt="" />
                 <img loading="lazy" className="z-10 absolute left-[45%] top-[10%]" src="/Home/ils2.png" alt="" />
                 <img loading="lazy" className="z-10 absolute top-[40%] right-[0%]" src="/Home/ils_left.png" alt="" />
@@ -116,16 +124,15 @@ const HomePage = () => {
                 <HeroButton className={'z-10 absolute top-[50%] left-[30%]'} Text={'Personalised Experience'}/>
                 <HeroButton className={'z-10 absolute bottom-[10%] left-[5%]'} Text={'Personality Development'}/>
                 <HeroButton className={'z-10 absolute bottom-[15%] right-[0%]'} Text={'Educational Adventure '}/>
-            </div>
+            </motion.div>
         </div>
         
         <div className="w-full mt-[50px] ">
             <div className="mx-[40px] sm:mx-[20px] flex justify-between sm:flex-col">
                 <motion.div
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.5 }}
+                initial="hidden"
+                variants={fadeIn}
+                whileInView={'visible'}
                 className="w-[35%] flex flex-col gap-[25px] sm:w-full ">
                     <p className="text-black text-[40px] font-bold font-inter sm:text-[25px] ">
                     Your Ultimate Camping Adventure Awaits
@@ -196,16 +203,21 @@ const HomePage = () => {
         </div>
 
 
-        <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        <div
+        
         className="w-full flex ">
-            <div className="w-[60%] ">
+            <motion.div
+            initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+            className="w-[60%] ">
                 <img src="/Home/mukteshwar.webp" alt="" />
-            </div>
-            <div className="w-[40%] ">
+            </motion.div>
+            <motion.div
+            initial="hidden"
+            variants={slideInRight}
+            whileInView={'visible'}
+            className="w-[40%] ">
                 <div className="m-[50px] flex flex-col gap-5 ">
                 <p className="font-bold text-[40px] font-inter">Captain Khoj Mukteshwar Camp</p>
                 <p>Join us for a six night, Seven day summer camp in the scenic beauty of Nainital and Jim Corbett. Enjoy thrilling activities, self-discovery, and a deep connection with nature for an unforgettable adventure.</p>
@@ -229,17 +241,16 @@ const HomePage = () => {
                     </div>
                     
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
       
         {/* Kashmir quest starts */}
            
 
         <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+       initial="hidden"
+       variants={fadeIn}
+       whileInView={'visible'}
         className=" w-full">
             <div className="flex flex-col gap-4 items-center justify-center">
                 <p className="font-bold text-[40px] font-inter">Kashmir Quest</p>
@@ -250,7 +261,11 @@ const HomePage = () => {
             <div className="w-full relative">
             <img loading="lazy" src="/Home/kashmir.webp" alt="" className="w-full" />
 
-            <div className="w-[526px] h-[326px] bg-transparent-black absolute top-[25%] left-[8%]">
+            <motion.div
+            initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+            className="w-[526px] h-[326px] bg-transparent-black absolute top-[25%] left-[8%]">
                 <div className="mx-[36px] my-[25px]">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -270,7 +285,7 @@ const HomePage = () => {
                     </AnimatePresence>
                 </div>
                 <Dots imgIndex={currentIndex} setImgIndex={handleInteraction} arrayName={textAnimate}/>
-            </div>
+            </motion.div>
         </div>
         </motion.div>
            
@@ -413,9 +428,21 @@ const HomePage = () => {
 
             </motion.div>
             <div className="flex justify-around gap-5 ">
-                <img loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
-                <img loading="lazy"  src="/Home/india.png" alt="" />
-                <img loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <motion.img
+                initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+                loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
+                <motion.img
+                initial="hidden"
+                variants={fadeIn}
+                whileInView={'visible'}
+                loading="lazy"  src="/Home/india.png" alt="" />
+                <motion.img
+                initial="hidden"
+            variants={slideInRight}
+            whileInView={'visible'}
+                loading="lazy"  src="/Home/iayp.png" alt="" className="h-[80%] my-auto"/>
 
             </div>
         </div>
@@ -447,27 +474,45 @@ const HomePage = () => {
 
   <div className="flex gap-10   absolute top-12 left-[50%] transform -translate-x-1/2 space-x-8 md:flex-row items-center">
     {/* First Card */}
-    <div className="flex gap-3 flex-col items-center">
+    <motion.div
+    variants={slideIn}
+    initial='hidden'
+    whileInView={'visible'}
+    className="flex gap-3 flex-col items-center">
       <img loading="lazy" src="/Home/sky.png" alt="" className="w-[247px]  h-[237px] mt-[-20px]" />
       <p className="text-[18px] font-bold font-inter">Sky Gazing</p>
       <p className="text-[16px] font-inter text-center w-[80%]">With 25 years of rich experience in outbound experiential learning.</p>
-    </div>
+    </motion.div>
 
     {/* Second Card */}
-    <div className="flex  gap-3 flex-col items-center">
+    <motion.div
+    variants={slideInRight}
+    initial='hidden'
+    whileInView={'visible'}
+    className="flex  gap-3 flex-col items-center">
     <img loading="lazy" src="/mobile/space.jpg" alt="" className="w-[247px] h-[237px] rounded-md" />
     <p className="text-[18px] font-bold font-inter">Space Settlement Contest</p>
       <p className="text-[16px] font-inter text-center w-[70%]">Join us in exploring new frontiers through exciting challenges in space science and technology.</p>
-    </div>
+    </motion.div>
   </div>
 </div>
 
         </div>
         <div className="w-full bg-[#E9F9FE] flex mt-[100px]">
-            <div className="flex-1">
+            <motion.div
+             variants={slideIn}
+    initial='hidden'
+    whileInView={'visible'}
+            className="flex-1">
             <img loading="lazy" src="/camps/tailored.webp" alt="" className="w-full"/>
-            </div>
-            <div className="flex-1 flex  items-center">
+            </motion.div>
+            <motion.div
+            
+ variants={slideInRight}
+    initial='hidden'
+    whileInView={'visible'}
+
+            className="flex-1 flex  items-center">
                 <div className="ml-[64px]">
                     <p className="  font-inter font-bold text-[40px] w-[60%] leading-[45px]">
                     Tailored Camp Inquiry
@@ -480,7 +525,7 @@ const HomePage = () => {
                     <Button onClick={'contact-us'} text={'Contact Now'}/>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
         
 

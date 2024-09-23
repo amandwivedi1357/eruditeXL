@@ -1,3 +1,6 @@
+import { motion } from "framer-motion"
+import { slideIn } from "../../utils/data"
+
 
 const Contactus = () => {
   return (
@@ -5,7 +8,11 @@ const Contactus = () => {
         <div className="w-full relative sm:h-[650px] sm:bg-[#01497B]">
             <img loading="lazy" src="/trips/contact.webp" alt="" className="w-full h-[701px] sm:hidden"/>
 
-            <div className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[631px] sm:h-[630px] rounded-lg card absolute top-[5%] left-[5%]">
+            <motion.div
+            initial="hidden"
+            variants={slideIn}
+            whileInView={'visible'}
+            className="w-[661px] sm:w-[95%] sm:m-2 sm:top-0 sm:left-0 h-[631px] sm:h-[630px] rounded-lg card absolute top-[5%] left-[5%]">
                 <div className="m-[40px]">
                     <p className="text-white text-[30px] font-inter font-bold">
                         Contact us
@@ -62,7 +69,7 @@ const Contactus = () => {
 
 
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
   )

@@ -3,6 +3,8 @@
 import { useParams } from 'react-router-dom';
 import { data } from './data';
 import Conc from '../../utils/conc';
+import { motion } from 'framer-motion';
+import { fadeIn, slideIn, slideInRight } from '../../utils/data';
 
 const SingleCamp = () => {
   const { single } = useParams();
@@ -14,34 +16,58 @@ console.log(single)
 
   return (
    <div className='w-full '>
-    <img loading="lazy" src={camp.img} alt="" className='border border-red-500 w-full'/>
+    <motion.img
+    variants={slideIn}
+    initial="hidden"
+    whileInView="visible"
+    loading="lazy" src={camp.img} alt="" className='border border-red-500 w-full'/>
     <div className="p-[40px] sm:p-[10px]">
-        <p className="text-inter font-bold text-[30px]">
+        <motion.p 
+        variants={slideIn}
+        initial='hidden'
+        whileInView={'visible'}
+        className="text-inter font-bold text-[30px]">
           {camp.name}
-        </p>
-        <p className='my-3'>{camp.overview}</p>
+        </motion.p>
+        <motion.p 
+              initial="hidden"
+             variants={slideIn}
+              whileInView={'visible'}
+        className='my-3'>{camp.overview}</motion.p>
 
         <div className='w-full'>
           <p className="text-inter font-bold text-[20px]">Benefits of {camp.name}</p>
           <ul className="list-none  my-4">
   {camp.benefit.map((item, index) => (
-    <li key={index} className="mb-4">
+    <motion.li
+          variants={slideIn}
+          initial='hidden'
+          whileInView={'visible'}
+    key={index} className="mb-4">
       <h3 className="font-semibold my-2">{item.head}</h3>
       <p>{item.desc}</p>
-    </li>
+    </motion.li>
   ))}
 </ul>
         </div>
 {
   camp.safetyNorms &&(
 <div className='w-full mt-[40px]'>
-          <p className="text-inter font-bold text-[20px]">Safety Norms for Running a Student Outbound Adventure Camp</p>
+          <motion.p 
+          variants={slideIn}
+      initial="hidden"
+      whileInView="visible"
+          className="text-inter font-bold text-[20px]">Safety Norms for Running a Student Outbound Adventure Camp</motion.p>
           <ul className="list-none  my-4">
   {camp.safetyNorms.map((item, index) => (
-    <li key={index} className="mb-4">
+    <motion.li 
+    variants={slideIn}
+      initial="hidden"
+      whileInView="visible"
+    key={index} className="mb-4">
       <h3 className="font-semibold my-2">{item.head}</h3>
       <p>{item.desc}</p>
-    </li>
+    </motion.li>
   ))}
 </ul>
         </div>
@@ -54,16 +80,24 @@ console.log(single)
 
     
     <div className='mt-[40px]  flex sm:block '>
-                <div className="flex flex-col gap-[20px] flex-1 ">
+                <motion.div
+                variants={slideIn}
+      initial="hidden"
+      whileInView="visible"
+                className="flex flex-col gap-[20px] flex-1 ">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
                       CAS Initiative 
                     </p>
                     <p className='font-inter text-[16px]'>
                    {camp.CAS.overview}
                     </p>
-                </div>
+                </motion.div>
                
-                <div className="flex-1  flex flex-col gap-[20px]   sm:mt-7">
+                <motion.div
+                variants={slideInRight}
+      initial="hidden"
+      whileInView="visible"
+                className="flex-1  flex flex-col gap-[20px]   sm:mt-7">
                 <p className='font-inter font-bold text-[30px] sm:text-[25px] ml-5 sm:ml-0'>
                        Some Key Points For CAS Initiatives:
                  </p>
@@ -79,11 +113,15 @@ console.log(single)
                   }
                  
                 </ul>
-                </div>
+                </motion.div>
                </div>
-               <div className='w-full mb-[40px] mt-[5rem] sm:mt-[2rem]'>
+               <motion.div
+               variants={fadeIn}
+               initial="hidden"
+               whileInView="visible"
+               className='w-full mb-[40px] mt-[5rem] sm:mt-[2rem]'>
                 <p className='font-inter text-center text-[16px]'>{camp.CAS.conclusion}</p>
-               </div>
+               </motion.div>
                </div>
   )
 }
@@ -98,11 +136,15 @@ console.log(single)
 <div className='mt-[40px] grid grid-cols-4 sm:grid-cols-2 gap-5'>
 {
   camp.activities.map((item,idx)=>(
-    <div className='flex flex-col gap-3' key={idx}>
+    <motion.div
+    variants={fadeIn}
+      initial="hidden"
+      whileInView="visible"
+    className='flex flex-col gap-3' key={idx}>
     <img loading="lazy" src={item.img} alt="" />
     <p className='text-inter font-bold text-[18px]'>{item.head}</p>
     <p className='text-inter text-[16px]'>{item.desc}</p>
-    </div>
+    </motion.div>
   ))
 }
 </div>

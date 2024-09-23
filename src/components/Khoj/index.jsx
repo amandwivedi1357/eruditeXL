@@ -2,6 +2,8 @@
 import React from 'react'
 import Conc from '../../utils/conc';
 import AdventureActivities from './Grid';
+import { motion } from 'framer-motion';
+import { fadeIn, slideIn, slideInRight } from '../../utils/data';
 const inclExp = [
     {
         icon:'/camps/gadget.svg',
@@ -41,7 +43,11 @@ const data = [
   ];
   const ImageTextSection = ({ img, day, head, desc, reverse }) => {
     return (
-      <div className={`flex  sm:flex-col ${img ? (reverse ? 'flex-row-reverse' : '') : ''} items-center my-4`}>
+      <motion.div
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="visible"
+      className={`flex  sm:flex-col ${img ? (reverse ? 'flex-row-reverse' : '') : ''} items-center my-4`}>
         {img && (
           <div className="flex-1">
             <img loading="lazy" src={img} alt="description" className="w-full h-auto" />
@@ -59,17 +65,26 @@ const data = [
             {desc}
           </p>
         </div>
-      </div>
+      </motion.div>
     );
   };
+  
   
 const CaptainKhoj = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-<img loading="lazy" src="/camps/khoj.png" alt="" className='w-full'/>
+<motion.img
+variants={slideIn}
+initial="hidden"
+whileInView="visible"
+loading="lazy" src="/camps/khoj.webp" alt="" className='w-full'/>
 <div className="m-[40px] flex gap-[30px] sm:flex-col sm:mx-[20px] sm:mt-[10px]">
-<div className="flex-1 flex flex-col gap-3">
+<motion.div
+variants={slideIn}
+      initial="hidden"
+      whileInView="visible"
+className="flex-1 flex flex-col gap-3">
 <p className="font-inter font-bold text-[30px] sm:text-[25px]">
 Captain Khoj Mukteshwar Camp
 </p>
@@ -89,8 +104,12 @@ Location and Accomodation
 This perfect blend of living arrangements fosters a sense of tranquility and wonder, enhancing your overall experience. Join us for an unforgettable week filled with thrilling activities, camaraderie, and memories that will last a lifetime, all set in the picturesque surroundings of Nainital and Jim Corbett.
 </p>
 </div>
-</div>
-<div className="flex-1">
+</motion.div>
+<motion.div
+variants={slideInRight}
+      initial="hidden"
+      whileInView="visible"
+className="flex-1">
     <p className='font-inter ml-[60px] text-[18px] font-bold sm:text-left sm:ml-0'>
     All-Inclusive Experience
     </p>
@@ -104,7 +123,7 @@ This perfect blend of living arrangements fosters a sense of tranquility and won
         ))
     }
     </div>
-</div>
+</motion.div>
 </div>
 <div className='w-full my-[40px]'>
 <p className='mx-[40px] font-bold font-inter text-[30px] sm:text-[25px] sm:mx-[20px]' >The Itinerary</p>
