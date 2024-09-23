@@ -131,19 +131,19 @@ them in Creativity, Activity, and Service categories, fostering personal growth 
        
         activities:[
             {
-                img:'/camps/act1.png',
+                img:'/camps/act1.webp',
                 head:'Knot Practice',
             },
             {
-                img:'/camps/act2.png',
+                img:'/camps/act2.webp',
                 head:'Blind Trekking',
             },
             {
-                img:'/camps/act3.png',
+                img:'/camps/act3.webp',
                 head:'Zipline',
             },
             {
-                img:'/camps/act4.png',
+                img:'/camps/act4.webp',
                 head:'Tent Pitching',
             },
         ]
