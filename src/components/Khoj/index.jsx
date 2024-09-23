@@ -31,12 +31,12 @@ const inclExp = [
 
 const data = [
     {  head: 'Delhi - Haldwani - Gajrola',desc:'Late night pick-up from Delhi and drive to Haldwani, with a transit dinner at Gajrola.',num:1 },
-    { img: '/camps/img2.png', head: 'Camp Nirmit',desc:'Have breakfast in Haldwani, proceed to Camp Nirmit at 11:00 a.m, followed by an acclimatisation trek to a village, evening activities, bonfire, and an overnight stay.',num:2 },
-    { img: '/camps/img3.png', head: 'Trek to valley Point',desc:'Embark on an early morning 5 km trek to the valley point for rappelling and ziplining, have lunch at the activity point, then return to the campsite for an overnight stay.',num:3 },
-    { img: '/camps/img4.png', head: 'Farming Activities & Cultural Interactions',desc:'Pack up early in the morning and visit a village for farming activities and cultural interactions. Reach Diganta Resorts around lunchtime for lunch and stay, followed by evening DJ and music.',num:4 },
-    { img: '/camps/img5.png', head: 'Bheemtal - Nainital',desc:'Check out after breakfast, drive to Bheemtal for kayaking, have a working lunch at the lake, then reach FOXOSO Hotel and drive to Nainital Mall Road in the evening for sightseeing and reflections.',num:5 },
-    { img: '/camps/img6.png', head: 'Jim Corbett',desc:'Check out after breakfast and drive to Jim Corbett, check in and have lunch, followed by a 3:00 p.m. jeep safari, then return to Tatva Grand Resort for evening snacks, pool activities, a film about Jim Corbett, dinner, and an overnight stay.',num:6 },
-    { img: '/camps/img7.png', head: 'Back to Delhi',desc:'Check out after breakfast, drive to Delhi with a transit lunch at Gajrola, and drop off at Delhi Airport at 3:00 p.m.',num:7 },
+    { img: '/camps/img2.webp', head: 'Camp Nirmit',desc:'Have breakfast in Haldwani, proceed to Camp Nirmit at 11:00 a.m, followed by an acclimatisation trek to a village, evening activities, bonfire, and an overnight stay.',num:2 },
+    { img: '/camps/img3.webp', head: 'Trek to valley Point',desc:'Embark on an early morning 5 km trek to the valley point for rappelling and ziplining, have lunch at the activity point, then return to the campsite for an overnight stay.',num:3 },
+    { img: '/camps/img4.webp', head: 'Farming Activities & Cultural Interactions',desc:'Pack up early in the morning and visit a village for farming activities and cultural interactions. Reach Diganta Resorts around lunchtime for lunch and stay, followed by evening DJ and music.',num:4 },
+    { img: '/camps/img5.webp', head: 'Bheemtal - Nainital',desc:'Check out after breakfast, drive to Bheemtal for kayaking, have a working lunch at the lake, then reach FOXOSO Hotel and drive to Nainital Mall Road in the evening for sightseeing and reflections.',num:5 },
+    { img: '/camps/img6.webp', head: 'Jim Corbett',desc:'Check out after breakfast and drive to Jim Corbett, check in and have lunch, followed by a 3:00 p.m. jeep safari, then return to Tatva Grand Resort for evening snacks, pool activities, a film about Jim Corbett, dinner, and an overnight stay.',num:6 },
+    { img: '/camps/img7.webp', head: 'Back to Delhi',desc:'Check out after breakfast, drive to Delhi with a transit lunch at Gajrola, and drop off at Delhi Airport at 3:00 p.m.',num:7 },
     // Add more objects...
   ];
   const ImageTextSection = ({ img, day, head, desc, reverse }) => {
