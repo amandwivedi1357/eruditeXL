@@ -87,7 +87,7 @@ const GalleryPage = () => {
                 width: '100%',
                 height: '515',
                 playerVars: {
-                  autoplay: 1,
+                  autoplay: 0,
                   rel:0,
                   controls:1,
                 },
