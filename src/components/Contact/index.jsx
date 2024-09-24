@@ -25,17 +25,17 @@ const Contactus = () => {
     <div className="w-full md:w-[48%] mb-8">
       <input
         type="text"
-        placeholder="First Name"
+        placeholder="Full Name"
         className="w-full text-white bg-transparent border-b border-white border-opacity-40 placeholder-white focus:outline-none pb-4 sm:pb-[6px]"
       />
     </div>
-    <div className="w-full md:w-[48%] mb-8">
+    {/* <div className="w-full md:w-[48%] mb-8">
       <input
         type="text"
         placeholder="Last Name"
         className="w-full text-white bg-transparent border-b border-white border-opacity-40 placeholder-white focus:outline-none pb-4 sm:pb-[6px]"
       />
-    </div>
+    </div> */}
   </div>
   <div className="flex flex-row sm:flex-col flex-wrap justify-between">
     <div className="w-full text-white md:w-[48%] mb-8">

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from 'framer-motion'
 import Conc from '../../utils/conc'
-import { members } from '../../utils/data'
+import { fadeIn, members, slideIn, slideInRight } from '../../utils/data'
 import { SwipeCarousel } from './Carousel'
 
 const About = () => {
@@ -23,10 +23,9 @@ const About = () => {
     <div className='w-full overflow-hidden'>
                <div className='m-[40px]  flex sm:block sm:m-[20px] '>
                 <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+               initial='hidden'
+               variants={slideIn}
+               whileInView={'visible'}
                 className="flex flex-col gap-[20px] flex-1 ">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px]'>
                     Erudite Journey 1998
@@ -43,28 +42,25 @@ const About = () => {
 
                 </motion.div>
                 <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+               initial='hidden'
+               variants={slideInRight}
+               whileInView={'visible'}
                 className="flex-1 sm:mt-7">
                     <img loading="lazy" src="/about/top.webp" alt="" className='w-full'/>
                 </motion.div>
                </div>
                <div className='my-[40px]  flex sm:block '>
                 <motion.div
-                initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+                 initial='hidden'
+                 variants={slideIn}
+                 whileInView={'visible'}
                 className="flex-1 ">
                     <img loading="lazy" src="/about/vision.webp" alt="" className='w-full'/>
                 </motion.div>
                 <motion.div
-                initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+                initial='hidden'
+                variants={slideInRight}
+                whileInView={'visible'}
                 className="flex justify-center flex-col gap-[20px] flex-1 sm:mx-[20px]">
                     <p className='font-inter font-bold text-[30px] sm:text-[25px] sm:mt-5'>
                     Vision
@@ -189,7 +185,11 @@ const About = () => {
             <p className='text-[25px] font-bold '>Why Choose us</p>
             <p className='text-[16px] mt-3'>Erudite Initiatives, particularly through Erudite Experiential Learning, began its journey in 1998 with a unique outbound overnight camp for Oakridge International School. </p>
             <div className=" w-full  flex flex-col gap-4 mt-5">
-                    <div className="w-full flex flex-col gap-2  ">
+                    <motion.div
+                    initial='hidden'
+                    variants={slideIn}
+                    whileInView={'visible'}
+                    className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -201,8 +201,12 @@ const About = () => {
                         <p className="w-[85%] ml-9">
                         With 25 years of rich experience in outbound experiential learning.
                         </p>
-                    </div>
-                    <div className="w-full flex flex-col gap-2  ">
+                    </motion.div>
+                    <motion.div
+                    initial='hidden'
+                    variants={slideIn}
+                    whileInView={'visible'}
+                    className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -213,8 +217,12 @@ const About = () => {
                         
                         <p className="w-[85%] ml-9">
                         Led by certified experiential educators ensuring engaging activities with meaningful learning outcomes.                        </p>
-                    </div>
-                    <div className="w-full flex flex-col gap-2  ">
+                    </motion.div>
+                    <motion.div
+                    initial='hidden'
+                    variants={slideIn}
+                    whileInView={'visible'}
+                    className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -225,8 +233,12 @@ const About = () => {
                         
                         <p className="w-[85%] ml-9">
                         A focus on reflective learning helps participants absorb, understand, and apply lessons from each experience.                             </p>
-                    </div>
-                    <div className="w-full flex flex-col gap-2  ">
+                    </motion.div>
+                    <motion.div
+                    initial='hidden'
+                    variants={slideIn}
+                    whileInView={'visible'}
+                    className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -237,8 +249,12 @@ const About = () => {
                         
                         <p className="w-[85%] ml-9">
                         Equipped with the highest quality gear, enhancing the safety and effectiveness of outdoor experiential learning.                       </p>
-                    </div>
-                    <div className="w-full flex flex-col gap-2  ">
+                    </motion.div>
+                    <motion.div
+                    initial='hidden'
+                    variants={slideIn}
+                    whileInView={'visible'}
+                    className="w-full flex flex-col gap-2  ">
 
                             <div className="flex gap-4 items-center">
                             <Conc/>
@@ -250,24 +266,36 @@ const About = () => {
                         <p className="w-[85%] ml-9">
                         High focus on both the physical and psychological safety of participants.
                         </p>
-                    </div>
+                    </motion.div>
                        
                 </div>
 
             
             </div>
-                <img loading="lazy" src="/about/mob_mount.webp" alt="" className='w-full mt-20 hidden sm:block'/>
+                <motion.img
+                initial='hidden'
+                variants={fadeIn}
+                whileInView={'visible'}
+                loading="lazy" src="/about/mob_mount.webp" alt="" className='w-full mt-20 hidden sm:block'/>
 
-            <div className="m-[40px] sm:hidden">
+{/* PDF preview */}
+<motion.div
+initial='hidden'
+variants={fadeIn}
+whileInView={'visible'}
+className='mx-[50px]'>
+ <img src="/erudite.jpg" alt="" className='w-64 mx-auto'/>
+</motion.div>
+            <div className="m-[40px] ">
             <p className="text-center text-[30px] font-inter font-bold">
             Our Team Members                
             </p>
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+           
             transition={{ duration: 0.5 }}
-            className='w-full grid grid-cols-4 mt-[40px]'>
+            className='w-full grid grid-cols-4 mt-[40px] sm:grid-cols-1'>
                 {
                     members.map((item,idx)=>(
                         <div className='flex  flex-col gap-[15px] ' key={idx}>
@@ -279,7 +307,7 @@ const About = () => {
                 }
             </motion.div>
             </div>
-            <div className='hidden sm:block mt-[30px]'>
+            <div className='hidden  mt-[30px]'>
                 <p className='px-[20px] text-[25px] font-bold'>Our Team Members</p>
                 <SwipeCarousel imgs={members}/>
             </div>

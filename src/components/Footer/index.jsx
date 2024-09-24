@@ -40,7 +40,11 @@ const Footer = () => {
                     </div>
                     <div className='flex gap-4'>
                         <img loading="lazy" src="/Home/Mail.svg" alt="" className=''/>
-                        <p className='font-inter text-white text-[16px]'>Info@eruditexl.com</p>
+                        <p className='font-inter text-white text-[16px]'>camps@eruditexl.com</p>
+                    </div>
+                    <div className='flex gap-4'>
+                        <img loading="lazy" src="/Home/Mail.svg" alt="" className=''/>
+                        <p className='font-inter text-white text-[16px]'>pvishnu2601@gmail.com</p>
                     </div>
                 </div>
             </div>
