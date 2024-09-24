@@ -136,10 +136,10 @@ export const galleryTabs = [
     {
         head:'Kashmir Quest',
     img:[
-        '/inschool/1.png',
-        '/inschool/2.png',
-        '/inschool/3.png',
-        '/inschool/4.png',
+        // '/inschool/1.png',
+        // '/inschool/2.png',
+        // '/inschool/3.png',
+        // '/inschool/4.png',
         
     ]
     },

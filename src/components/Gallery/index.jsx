@@ -6,6 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useBreakpointValue } from "@chakra-ui/react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Loader } from "../Loader";
+import YouTube from 'react-youtube';
 
 const GalleryPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,29 +69,56 @@ const GalleryPage = () => {
       <LazyLoadImage
         src={image}
         alt={`Gallery image ${index + 1}`}
-        // effect="blur"
         className="w-full h-auto transition-transform duration-500 ease-in-out transform hover:scale-110 hover:z-10"
-         wrapperClassName="w-full h-full"
+        wrapperClassName="w-full h-full"
         onLoad={() => handleImageLoad(tabIndex, index)}
       />
     </div>
   ), [openModal, handleImageLoad]);
+
+  const renderContent = useCallback(({ data, tabIndex }) => {
+    if (data.head === 'Kashmir Quest') {
+      return (
+        <>
+          <div className="mb-4">
+            <YouTube
+              videoId="M0DqxzPtuLE"
+              opts={{
+                width: '100%',
+                height: '315',
+                playerVars: {
+                  autoplay: 1,
+                  rel:0,
+                  controls:1,
+                },
+              }}
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex }))}
+          </div>
+        </>
+      );
+    }
+    return (
+      <div className="grid grid-cols-3 gap-4">
+        {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex }))}
+      </div>
+    );
+  }, [renderImage]);
 
   const memoizedTabPanels = useMemo(() => (
     galleryTabs.map((data, idx) => (
       <TabPanel key={idx}>
         {!isTabFullyLoaded(idx) && (
           <div className="w-full flex justify-center items-center">
-
             <Loader />
           </div>
-          )}
-        <div className="grid grid-cols-3 gap-4">
-          {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex: idx }))}
-        </div>
+        )}
+        {renderContent({ data, tabIndex: idx })}
       </TabPanel>
     ))
-  ), [renderImage, isTabFullyLoaded]);
+  ), [renderContent, isTabFullyLoaded]);
 
   const memoizedAccordion = useMemo(() => (
     <Accordion allowToggle>
@@ -106,14 +134,12 @@ const GalleryPage = () => {
           </h2>
           <AccordionPanel pb={4}>
             {!isTabFullyLoaded(idx) && <Loader />}
-            <div className="grid grid-cols-2 gap-4">
-              {data.img.map((image, imgIdx) => renderImage({ image, index: imgIdx, tabIndex: idx }))}
-            </div>
+            {renderContent({ data, tabIndex: idx })}
           </AccordionPanel>
         </AccordionItem>
       ))}
     </Accordion>
-  ), [renderImage, isTabFullyLoaded]);
+  ), [renderContent, isTabFullyLoaded]);
 
   return (
     <div className="w-full">
@@ -137,51 +163,51 @@ const GalleryPage = () => {
           </Tabs>
         ) : memoizedAccordion}
         
-      <Modal isOpen={isOpen} onClose={closeModal} size="full" isCentered>
-        <ModalOverlay />
-        <ModalContent className="bg-transparent shadow-none">
-          <ModalBody className="flex justify-center items-center relative">
-            <IconButton
-              icon={<FaArrowLeft />}
-              onClick={prevImage}
-              bgColor={'blue'}
-              color={'white'}
-              _hover={{
-                bg:'yellow',
-                color:'black'
-              }}
-              aria-label="Previous image"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20"
-            />
-            <img 
-              src={galleryTabs[currentTab].img[currentImageIndex]} 
-              alt={`Selected image ${currentImageIndex + 1} in ${galleryTabs[currentTab].head}`} 
-              className="h-[35rem]"
-            />
-            <IconButton
-              icon={<FaArrowRight />}
-              onClick={nextImage}
-              aria-label="Next image"
-              bgColor={'blue'}
-              color={'white'}
-              _hover={{
-                bg:'yellow',
-                color:'black'
-              }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20"
-            />
-          </ModalBody>
-          <Button 
-            bg={'yellow'} 
-            _hover={{bg:"blue",color:'white'}} 
-            mt={4} 
-            onClick={closeModal} 
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[80%]"
-          >
-            Close
-          </Button>
-        </ModalContent>
-      </Modal>
+        <Modal isOpen={isOpen} onClose={closeModal} size="full" isCentered>
+          <ModalOverlay />
+          <ModalContent className="bg-transparent shadow-none">
+            <ModalBody className="flex justify-center items-center relative">
+              <IconButton
+                icon={<FaArrowLeft />}
+                onClick={prevImage}
+                bgColor={'blue'}
+                color={'white'}
+                _hover={{
+                  bg:'yellow',
+                  color:'black'
+                }}
+                aria-label="Previous image"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20"
+              />
+              <img 
+                src={galleryTabs[currentTab].img[currentImageIndex]} 
+                alt={`Selected image ${currentImageIndex + 1} in ${galleryTabs[currentTab].head}`} 
+                className="h-[35rem]"
+              />
+              <IconButton
+                icon={<FaArrowRight />}
+                onClick={nextImage}
+                aria-label="Next image"
+                bgColor={'blue'}
+                color={'white'}
+                _hover={{
+                  bg:'yellow',
+                  color:'black'
+                }}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20"
+              />
+            </ModalBody>
+            <Button 
+              bg={'yellow'} 
+              _hover={{bg:"blue",color:'white'}} 
+              mt={4} 
+              onClick={closeModal} 
+              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[80%]"
+            >
+              Close
+            </Button>
+          </ModalContent>
+        </Modal>
       </div>
     </div>
   );
