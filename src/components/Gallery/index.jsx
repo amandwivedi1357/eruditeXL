@@ -85,7 +85,7 @@ const GalleryPage = () => {
               videoId="M0DqxzPtuLE"
               opts={{
                 width: '100%',
-                height: '315',
+                height: '515',
                 playerVars: {
                   autoplay: 1,
                   rel:0,
