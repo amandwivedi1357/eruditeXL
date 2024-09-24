@@ -60,7 +60,11 @@ const fadeIn = {
       };
   return (
     <div className='w-full'>
-    <img loading="lazy" src='/trips/top (1).webp' alt="" className='w-full sm:w-full'/>
+    <motion.img
+    variants={slideIn}
+    initial="hidden"
+    whileInView="visible"
+    loading="lazy" src='/trips/top (1).webp' alt="" className='w-full sm:w-full'/>
     <motion.div
       variants={slideIn}
       initial="hidden"
@@ -166,7 +170,7 @@ const fadeIn = {
          viewport={{ once: true }}
                     loading="lazy" src="/trips/day5.webp" alt="" className='absolute bottom-[12%] left-[0] sm:w-full sm:bottom-[36%]' />
                     < motion.img
-                     variants={slideIn}
+                     variants={slideInRight}
          initial="hidden"
          whileInView="visible"
          viewport={{ once: true }}
