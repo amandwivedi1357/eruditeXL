@@ -284,7 +284,11 @@ initial='hidden'
 variants={fadeIn}
 whileInView={'visible'}
 className='mx-[50px]'>
+    <div className='flex flex-col gap-5'>
+    <p className='text-[30px] font-inter font-bold'>Our Commitment to Excellence</p>
+    <p className='text-[16px]'>At Erudite Initiatives, we pride ourselves on maintaining the highest standards in youth education and development. Our certification as a Trained Activity Provider is a testament to our unwavering dedication to fostering growth, leadership, and positive experiences for young people in India. This recognition reflects our commitment to delivering impactful programs and creating a better future for the next generation.</p>
  <img src="/erudite.jpg" alt="" className='w-64 mx-auto'/>
+    </div>
 </motion.div>
             <div className="m-[40px] ">
             <p className="text-center text-[30px] font-inter font-bold">
