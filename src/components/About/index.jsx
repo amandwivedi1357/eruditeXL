@@ -283,11 +283,24 @@ const About = () => {
 initial='hidden'
 variants={fadeIn}
 whileInView={'visible'}
-className='mx-[50px]'>
-    <div className='flex flex-col gap-5'>
-    <p className='text-[30px] font-inter font-bold'>Our Commitment to Excellence</p>
-    <p className='text-[16px]'>At Erudite Initiatives, we pride ourselves on maintaining the highest standards in youth education and development. Our certification as a Trained Activity Provider is a testament to our unwavering dedication to fostering growth, leadership, and positive experiences for young people in India. This recognition reflects our commitment to delivering impactful programs and creating a better future for the next generation.</p>
- <img src="/erudite.jpg" alt="" className='w-64 mx-auto'/>
+className='mx-[50px] sm:mx-[20px]'>
+    <div className='flex sm:flex-col gap-5'>
+        <motion.div
+        initial='hidden'
+        variants={slideIn}
+        whileInView={'visible'}
+        className='flex-1 flex flex-col gap-10 sm:gap-2'>
+        <p className='text-[30px] sm:text-[24px] font-inter font-bold'>Our Commitment to Excellence</p>
+           <p className='text-[16px]'>At Erudite Initiatives, we pride ourselves on maintaining the highest standards in youth education and development. Our certification as a Trained Activity Provider is a testament to our unwavering dedication to fostering growth, leadership, and positive experiences for young people in India. This recognition reflects our commitment to delivering impactful programs and creating a better future for the next generation.</p>
+        </motion.div>
+        <motion.div
+        initial='hidden'
+        variants={slideInRight}
+        whileInView={'visible'}
+        className='flex-1'>
+
+    <img src="/erudite.jpg" alt="" className='w-64 mx-auto'/>
+        </motion.div>
     </div>
 </motion.div>
             <div className="m-[40px] ">

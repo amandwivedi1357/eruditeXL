@@ -4,7 +4,7 @@ import SmoothScroll from "./utils/SmoothScroll"
 import ScrollToTop from "./routes/ScrolltoTop"
 const App = () => {
   return (
-    <>
+    <div className="overflow-hidden">
 
 <div className="whatsapp-icon-container sm:w-20 ">
   <img 
@@ -32,7 +32,7 @@ const App = () => {
     <ScrollToTop/>
       <Allroutes/>
     </SmoothScroll>
-    </>
+    </div>
   )
 }
 
