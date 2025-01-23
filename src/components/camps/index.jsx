@@ -5,7 +5,7 @@ import { data } from './data';
 import Conc from '../../utils/conc';
 import { motion } from 'framer-motion';
 import { fadeIn, slideIn, slideInRight } from '../../utils/data';
-
+import { FiDownload } from "react-icons/fi"
 const SingleCamp = () => {
   const { single } = useParams();
   const camp = data.find(c => c.route === single);
@@ -46,9 +46,19 @@ console.log(single)
     key={index} className="mb-4">
       <h3 className="font-semibold my-2">{item.head}</h3>
       <p>{item.desc}</p>
+      
     </motion.li>
   ))}
+
+
 </ul>
+
+{single==='space-settlement-contest' &&(
+  <div>
+    <ConfirmationDisplay />
+  </div>
+)}
+
         </div>
 {
   camp.safetyNorms &&(
@@ -162,36 +172,104 @@ export { SingleCamp };
 
 
 
-{/* <div className="p-5">
-<h1 className="text-3xl font-bold mb-4">{camp.name}</h1>
-<img loading="lazy" src={camp.img} alt={camp.name} className="w-full h-auto mb-4" />
-<p className="mb-4">{camp.overview}</p>
-<h2 className="text-2xl font-semibold mb-2">Benefits</h2>
-<ul className="list-disc ml-5 mb-4">
-  {camp.benefit.map((item, index) => (
-    <li key={index} className="mb-2">
-      <h3 className="font-semibold">{item.head}</h3>
-      <p>{item.desc}</p>
-    </li>
-  ))}
-</ul>
-<h2 className="text-2xl font-semibold mb-2">Safety Norms</h2>
-<ul className="list-disc ml-5 mb-4">
-  {camp.safetyNorms.map((item, index) => (
-    <li key={index} className="mb-2">
-      <h3 className="font-semibold">{item.head}</h3>
-      <p>{item.desc}</p>
-    </li>
-  ))}
-</ul>
-<h2 className="text-2xl font-semibold mb-2">Activities</h2>
-<ul className="list-disc ml-5 mb-4">
-  {camp.activities.map((item, index) => (
-    <li key={index} className="mb-2">
-      <img loading="lazy" src={item.img} alt={item.head} className="w-full h-auto mb-2" />
-      <h3 className="font-semibold">{item.head}</h3>
-      <p>{item.desc}</p>
-    </li>
-  ))}
-</ul>
-</div> */}
+const ConfirmationDisplay = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a")
+    link.href = "/Erudite Initiatives.pdf"
+    link.download = "ISRO_Space_Education_Program_Certification.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  return (
+    <div className="w-full py-12">
+      <motion.div 
+        variants={slideIn}
+        initial="hidden"
+        whileInView="visible"
+        className="container mx-auto px-4"
+      >
+        <div className="text-center mb-12">
+          <h2 className="text-inter font-bold text-[30px] sm:text-[25px] text-black">
+            ISRO Space Education Program Certification
+          </h2>
+        </div>
+
+       
+
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-start">
+          {/* Certification Image */}
+          <div className="hidden sm:block flex justify-start p-4">
+                  <button
+                    onClick={handleDownload}
+                    className="bg-[#4285F4] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-blue-600 transition-colors"
+                  >
+                    <FiDownload className="w-5 h-5" />
+                    <span>Download PDF</span>
+                  </button>
+                </div>
+          <motion.div 
+            variants={slideIn}
+            initial="hidden"
+            whileInView="visible"
+            className="bg-white sm:hidden shadow-lg rounded-lg h-[80%] border border-gray-100"
+          >
+            <div className="p-4">
+              <div className="aspect-[3/4] relative rounded-lg overflow-hidden border border-gray-100">
+                <iframe 
+                  src="/Erudite Initiatives.pdf" 
+                  width="100%" 
+                  height="80%" 
+                  className="w-full h-[80%]"
+                  title="Erudite Initiatives PDF"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Certification Details */}
+          <motion.div 
+            variants={slideIn}
+            initial="hidden"
+            whileInView="visible"
+            className="space-y-6 mt-[-14rem] sm:mt-0"
+          >
+            <div>
+              <h3 className="font-inter font-bold text-[20px] mb-4 text-blue-600">
+                Registered Space Tutor Certification
+              </h3>
+              <p className="text-inter text-[16px] text-gray-600 leading-relaxed">
+                This certification represents a prestigious appointment as a Registered Space Tutor by ISRO, 
+                demonstrating commitment to space education and inspiring the next generation of space enthusiasts.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-inter font-bold text-[20px] mb-4 text-blue-600">
+                Key Responsibilities
+              </h3>
+              <ul className="list-disc list-inside text-inter text-[16px] text-gray-600 space-y-2">
+                <li>Conduct space education workshops</li>
+                <li>Promote space science awareness</li>
+                <li>Guide students in space-related careers</li>
+                <li>Align educational activities with ISRO's mission</li>
+              </ul>
+            </div>
+
+            <div className="flex justify-end mt-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/800px-Indian_Space_Research_Organisation_Logo.svg.png"
+                alt="ISRO Logo"
+                className="h-12"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
+
+export default ConfirmationDisplay

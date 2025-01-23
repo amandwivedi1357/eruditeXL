@@ -56,9 +56,9 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px; /* Adjusted height for mobile */
-  width: 150px; /* Adjusted width for mobile */
-  margin: 0 10px; /* Reduced margin for mobile */
+  height: 80px; 
+  width: 150px; 
+  margin: 0 10px; 
   background-color: white;
   border-radius: 10px;
 
